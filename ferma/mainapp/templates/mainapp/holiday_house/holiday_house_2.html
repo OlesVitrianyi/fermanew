@@ -1,0 +1,226 @@
+<title>Будинок 2 Ferma New</title>
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <div class="container my-5">
+        <div class="text-center" style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">
+            <h1 class="fs-1" style="letter-spacing: 0.7em; margin-right: -0.6em;">FERMA NEW</h1>
+            <h2 class="fs-4 mt-3" style="letter-spacing:0.32em;">відпочинковий комплекс</h2>
+        </div>
+    </div>
+    <br />
+        <div>
+            <h2 class="text-center fs-3">Будинок 2</h2>
+        </div>
+
+    <div id="" class="container-md pt-5">
+        <div class="row justify-content-md-center">
+            <div class="col-lg-10">
+
+                <!-- holiday house 1 describe -->
+                <div class="card border-0 shadow m-3 p-3">
+                    <div style="text-align: center;">
+                        <h3>Опис будинку</h3>
+                    </div>
+                    <div>
+                        <p>A-Frame будиночок відкритого планування</p>
+                        <p>2 пов. двоспальне ліжко та балкончик</p>
+                        <p>1 поверх Кухня, посуд на 6 осіб, мікрохвильовка, електроплита, електрочайник, мийка, капсульна кавомашина Nespresso.</p>
+                        <p>Джерельна вода для пиття. Диван розкладний. Стіл та 4 табуретки, холодильник. Санвузол з душем, фен, рушники.
+                            Тераса зі столом.</p>
+                        <p>Додатково: <br />
+                            У вартість входить користування басейном, бесідкою, шампура, решітка, дрова.<br />
+                            Є можливість доставити 1 односпальне розкладне ліжко. </p>
+                    </div>
+                </div>
+                <!-- end holiday house 1 describe -->
+
+            </div>
+        </div>
+    </div>
+
+    <!-- booking calendar -->
+    <div class="container">
+        <div style="text-align: center;">
+            <h3>Вільні дати для бронювання та ціни</h3>
+                <p>
+                    Просимо врахувати, ціни на бронювання будинків відпочинку та послуги на 1 та 2 січня
+                    підвищуються вдвічі від вказаної на сайті. Але це лише на ці дні підвищеного попиту
+                </p>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mt-2">
+
+                <div class="card h-100 border-0 shadow-lg">
+                    <div class="pt-2" style="text-align: center;">
+                        <h4>{{ current_month }} {{ current_year }}</h4>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Пн</th>
+                                <th>Вт</th>
+                                <th>Ср</th>
+                                <th>Чт</th>
+                                <th>Пт</th>
+                                <th>Сб</th>
+                                <th>Нд</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {% for week in cal_current_month %}
+                        <tr>
+                            {% for day in week %}
+                                {% if day != 0 %}
+                                    {% if day == current_day %}
+                                        {% if day in current_month_booked_dates %}
+                                            <td class="bg-primary text-white"><del>{{ day }}</del></td>
+                                        {% else %}
+                                            <td class="bg-primary text-white">{{ day }}<br>
+                                                <span class="date-price text-white">2000&#8372;</span></td>
+
+                                        {% endif %}
+                                    {% elif day < current_day %}
+                                            <td><del>{{ day }}</del></td>
+                                    {% elif day in current_month_booked_dates %}
+                                        <td><del>{{ day }}</del></td>
+                                    {% else %}
+                                        <td>{{ day }}<br>
+                                                    <span class="date-price">2000&#8372;</span></td>
+
+                                    {% endif %}
+                                {% else %}
+                                    <td></td>
+                                {% endif %}
+                            {% endfor %}
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+            <div class="col-lg-4 col-md-6 mt-2">
+                <div class="card h-100 border-0 shadow">
+                    <div class="pt-2" style="text-align: center;">
+                        <h4>{{ next_month }} {{ next_year }}</h4>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Пн</th>
+                                <th>Вт</th>
+                                <th>Ср</th>
+                                <th>Чт</th>
+                                <th>Пт</th>
+                                <th>Сб</th>
+                                <th>Нд</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {% for week in cal_next_month %}
+                        <tr>
+                            {% for day in week %}
+                                {% if day != 0 %}
+                                    {% if day in next_month_booked_dates %}
+                                        <td><del>{{ day }}</del></td>
+                                    {% else %}
+                                        <td>{{ day }}<br>
+                                                    <span class="date-price">2000&#8372;</span></td>
+                                    {% endif %}
+                                {% else %}
+                                    <td></td>
+                                {% endif %}
+                            {% endfor %}
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mt-2">
+                <div class="card h-100 border-0 shadow">
+                    <div class="pt-2" style="text-align: center;">
+                        <h4>{{ third_month }} {{ third_year }}</h4>
+                    </div>
+
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Пн</th>
+                            <th>Вт</th>
+                            <th>Ср</th>
+                            <th>Чт</th>
+                            <th>Пт</th>
+                            <th>Сб</th>
+                            <th>Нд</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for week in cal_third_month %}
+                    <tr>
+                        {% for day in week %}
+                            {% if day != 0 %}
+                                {% if day in third_month_booked_dates %}
+                                    <td><del>{{ day }}</del></td>
+                                {% else %}
+                                    <td>{{ day }}<br>
+                                                <span class="date-price">2000&#8372;</span></td>
+                                {% endif %}
+                            {% else %}
+                                <td></td>
+                            {% endif %}
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- end booking calendar -->
+
+    <!-- photo gallery -->
+    <div class="card border-0 shadow m-3 p-3 photo-gallery">
+        <div class="container">
+            <div class="intro">
+                <h3 class="text-center">Галерея будинку</h3>
+                <p class="text-center">Ми підготували для Вас комфортний, охайний будинок. Натисніть на фото для перегляду</p>
+            </div>
+            <div class="row photos">
+                <div class="col-sm-6 col-md-4 col-lg-3 item py-1"><a href="{% static 'mainapp/images/holiday_house/1/h_house1.1.png' %}" data-lightbox="photos"><img class="img-fluid" src="{% static 'mainapp/images/holiday_house/1/h_house1.1.png' %}"></a></div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item py-1"><a href="{% static 'mainapp/images/holiday_house/1/h_house1.2.png' %}" data-lightbox="photos"><img class="img-fluid" src="{% static 'mainapp/images/holiday_house/1/h_house1.2.png' %}"></a></div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item py-1"><a href="{% static 'mainapp/images/holiday_house/1/h_house1.3.png' %}" data-lightbox="photos"><img class="img-fluid" src="{% static 'mainapp/images/holiday_house/1/h_house1.3.png' %}"></a></div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item py-1"><a href="{% static 'mainapp/images/holiday_house/1/h_house1.4.png' %}" data-lightbox="photos"><img class="img-fluid" src="{% static 'mainapp/images/holiday_house/1/h_house1.4.png' %}"></a></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center">
+    <a type="button" class="btn btn-outline-primary shadow mt-4" href="{% url 'booking' %}">Бронювання</a>
+    </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      lightbox.option({
+        maxWidth: 700,
+        'resizeDuration': 200,
+        'wrapAround': true,
+      });
+    });
+  </script>
+
+{% endblock content %}
+
+
+
+

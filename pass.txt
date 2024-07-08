@@ -1,0 +1,33 @@
+fermanew.com/admin
+log: admin
+pass: Sjh8uP2ip
+
+
+http://127.0.0.1:8000/login_user/
+log: PetroTest
+pass: slavaukraini
+
+log: 0672686552
+pass: Turbota2000
+
+log:06726865522
+pass: Turbota2000
+
+gmail
+log: fermanew.com@gmail.com
+pass: GloryToUkraine2024
+
+Specific password for EMAIL_HOST_PASSWORD
+App name: FermaNewApp
+Pass: vsym kwni uaqj sazo
+
+domain name
+https://www.ukraine.com.ua/uk/
+login: fermanew.com@gmail.com
+pass: m%f837g(PE
+Ваш ID: 842937
+
+https://www.pythonanywhere.com/registration/register/beginner/
+login: fermanew
+Email: fermanew.com@gmail.com
+pass: GloryToUkraine2024

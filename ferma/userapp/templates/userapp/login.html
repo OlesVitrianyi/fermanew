@@ -1,0 +1,62 @@
+<title>Логін користувача Ferma New</title>
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <div class="container my-5">
+        <div class="text-center" style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">
+            <h1 class="fs-1" style="letter-spacing: 0.7em; margin-right: -0.6em;">FERMA NEW</h1>
+            <h2 class="fs-4 mt-3" style="letter-spacing:0.32em;">відпочинковий комплекс</h2>
+        </div>
+    </div>
+
+    <div class="container-lg pt-3">
+        <div class="row justify-content-lg-center">
+            <div class="col-lg-6 text-center">
+
+                {% if user.is_authenticated %}
+
+                    <div class="text-center">
+                        <div class="alert alert-success fs-3" role="alert">
+                            Ви вже увійшли!
+                        </div>
+                    </div>
+
+                {% else %}
+
+                  <h2 class="p-3 text-center">
+                      УВІЙТИ<br />
+                      в обліковий запис
+                  </h2>
+                  <div class="m-5">
+                    <form method="POST" action="" class="">
+                        {% csrf_token %}
+                            <div class="mb-3">
+                <!--              <label for="exampleInputEmail1" class="form-label fs-2">Логін</label>-->
+                              <label class="form-label fs-3">Логін</label>
+                              <input type="text" width="" class="form-control form-control-lg" name="username" aria-describedby="emailHelp" placeholder="Username...">
+                            </div>
+
+                            <div class="mb-3">
+                <!--              <label for="exampleInputPassword1" class="form-label fs-2">Пароль</label>-->
+                              <div class="text-center">
+                                <label class="form-label fs-3">Пароль</label>
+                              </div>
+                              <input type="password" class="form-control form-control-lg" placeholder="Password..." name="password">
+                            </div>
+                                <button type="submit" class="btn btn-outline-primary mt-2">Увійти</button>
+                                <br />
+
+                                <label class="form-label fs-3 mt-5">Не маєте облікового запису?</label>
+                                <br />
+                                <a href="{% url 'register' %}" class="btn btn-outline-primary mt-2">Зареєструватися</a>
+                                <br />
+                    </form>
+                  </div>
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'Sweet Mavka Script';
+  src: url('/media/fonts/sweet_mavka_script/Sweet_Mavka_Script.otf') format('opentype'),
+       url('/media/fonts/sweet_mavka_script/Sweet_Mavka_Script.ttf') format('truetype'),
+       url('/media/fonts/sweet_mavka_script/Sweet_Mavka_Script.woff') format('woff');
+}
+
+body {
+    /*font-family: 'Sweet Mavka Script', sans-serif;*/
+    background-color: #F5F5F5;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* calendar block */
+.date-price {
+    display: block;
+    font-size: 0.4rem;
+    color: gray;
+    margin-top: 5px;
+}
+table {
+    border-collapse: collapse;
+    }
+th, td {
+    /*border: 1px solid black;*/
+    padding: 10px;
+    text-align: center;
+    }
+/* end calendar block */
+

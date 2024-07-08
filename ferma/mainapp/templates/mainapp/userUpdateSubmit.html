@@ -1,0 +1,72 @@
+<title>Редагування бронювання Будинку Ferma New</title>
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <div class="container my-5">
+        <div class="text-center" style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">
+            <h1 class="fs-1" style="letter-spacing: 0.7em; margin-right: -0.6em;">FERMA NEW</h1>
+            <h2 class="fs-4 mt-3" style="letter-spacing:0.32em;">відпочинковий комплекс</h2>
+        </div>
+    </div>
+
+    <div class="container-lg pt-3">
+        <div class="row justify-content-lg-center">
+            <div class="col-lg-6">
+
+                {% if user.is_authenticated %}
+                <h2 class="text-center mt-3">РЕДАГУВАТИ БРОНЮВАННЯ</h2>
+                <div class="card border-0 shadow m-3 p-3">
+                <!--<div class="shadow p-4 mb-5 bg-body bg-body rounded text-black text-center m-5">-->
+                    <form method="post" action="{% url 'userUpdateSubmit' id %}" class="me-2 ms-2" required>
+
+                    {% csrf_token %}
+
+                        <!--Choice of house-->
+                        <div>
+                            <h3 class="text-center fPersian mt-4">Оберіть будинок:</h3>
+                            <div class="row justify-content-xl-center">
+                                <div class="col-xl-8 text-center">
+                                    <select class="form-select fs-3 text-center" name="holidayhouse">
+                                        {% for holidayhouse in holidayhouses %}
+                                        <option value="{{ holidayhouse.id }}">{{holidayhouse.name}}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--input time-->
+                        <div class="mt-4">
+                            <h3 class="text-center">Час поселення:</h3>
+                            <div class="row justify-content-xl-center">
+                                <div class="col-xl-8 text-center">
+                                    <select class="form-select fs-3 text-center" name="time">
+                                        {% for time in times %}
+                                        <option value="{{time}}">{{time}}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-outline-primary">Підтвердити</button>
+                        </div>
+                    </form>
+                </div>
+
+                {% else %}
+
+                <div class="shadow p-4 mb-5 bg-body bg-body rounded text-black  m-5">
+                    <h1 class="p-2  me-3">Спочатку увійдіть!</h1>
+                    <a href="{% url 'login' %}" class="btn btn-primary text-white">Увійти</a>
+                </div>
+
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,103 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+    <div class="container my-5">
+        <div class="text-center" style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">
+            <h1 class="fs-1" style="letter-spacing: 0.7em; margin-right: -0.6em;">FERMA NEW</h1>
+            <h2 class="fs-4 mt-3" style="letter-spacing:0.32em;">відпочинковий комплекс</h2>
+        </div>
+    </div>
+
+<!--contact us-->
+
+    <div id="container_post" class="container-md pt-5">
+        <div class="row justify-content-md-center">
+            <div class="col-lg-10">
+
+                <div class="text-center">
+                    <h2>Звʼязок з нами</h2>
+                    <br />
+                </div>
+                <section id="contact" class="card border-0 shadow m-3 p-3">
+                    <div class="container">
+                        <div class="row text-center">
+                          <div class="col-sm-6">
+                            <div class="contact-detail-box">
+                              <i class="fa fa-map-marker fa-3x text-colored"></i>
+                              <h3>Наше розташування</h3>
+                              <address>
+                                вул. Зарічна, 38, с. Головчинці,<br />
+                                Хмельницький район, Хмельницька область,<br />
+                                31533<br />
+                              </address>
+                            </div>
+                          </div><!-- end col -->
+
+                          <div class="col-sm-6">
+                            <div class="contact-detail-box">
+                              <i class="far fa-envelope text-colored fa-3x"></i>
+                              <h3>Для звʼязку з нами</h3>
+                                <a href="tel:+380967555757" id="phone_contact_us"><i class="bi bi-phone-fill"></i>&nbsp;+ 38 096 755 57 57</a>&nbsp;&nbsp;
+                                <a href="mailto:fermanew.com@gmail.com" id="mail_contact_us"><i class="bi bi-envelope-fill"></i>&nbsp;&nbsp;fermanew.com@gmail.com</a><br />
+                            </div>
+                          </div><!-- end col -->
+
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <div class="contact-map">
+                              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2023.6422531744827!2d27.466242945686712!3d49.42851935914747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472d8b6ebea6fdd7%3A0xae2b82c69bd408a5!2z0KTQtdGA0LzQsA!5e0!3m2!1sru!2sua!4v1719325909943!5m2!1sru!2sua" width="100%" height="360" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                          </div><!-- end col -->
+
+                          <!-- Feedback form -->
+                          <div class="col-sm-6">
+                            <div class="text-center">
+                              Ми з радістю розглянемо Ваші відгуки та пропозиції. Напишіть нам
+                            </div>
+                            <form role="form" name="ajax-form" id="ajax-form" method="post" class="form-main" action="{% url 'index' %}">
+
+                              {% csrf_token %}
+                              <div class="form-group pb-1">
+                                <label for="name2">Імʼя</label>
+                                <input class="form-control" id="name2" name="name" type="text" placeholder="введіть Ваше імʼя">
+                                <div class="error" id="err-name" style="display: none;">Будь ласка, введіть Ваше імʼя</div>
+                              </div> <!-- /Form-name -->
+
+                              <div class="form-group py-1">
+                                <label for="email2">Email</label>
+                                <input class="form-control" id="email2" name="email" type="text" placeholder="email">
+                                <div class="error" id="err-emailvld" style="display: none;">E-mail не є дійсним форматом</div>
+                              </div> <!-- /Form-email -->
+
+                              <div class="form-group py-1">
+                                <label for="message2">Повідомлення</label>
+                                <textarea class="form-control" id="message2" name="message" rows="4" placeholder="введіть повідомлення"></textarea>
+                                <div class="error" id="err-message" style="display: none;">Будь-ласка, введіть повідомлення</div>
+                              </div> <!-- /col -->
+
+                              <div class="row">
+                                <div class="d-grid gap-2">
+                                  <input class="btn btn-outline-primary btn-shadow mt-2" type="submit" value="Надіслати">
+                                </div>
+                              </div> <!-- /Form-message -->
+
+                            </form> <!-- /form -->
+                          </div>
+                          <!-- Feedback form -->
+
+                        </div> <!-- end row -->
+
+                      </div>
+                </section>
+            </div>
+        </div>
+    </div>
+<!-- end contact us -->
+
+{% endblock content %}

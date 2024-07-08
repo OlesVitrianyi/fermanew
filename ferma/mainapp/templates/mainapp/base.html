@@ -1,0 +1,207 @@
+{% load static %}
+{% load mainapp_tags %}
+
+<html lang="uk">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>{{title}}</title>
+    <meta charset="utf-8">
+    <!-- обов'язково для адаптивної верстки -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Lightbox CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.min.css" rel="stylesheet"/>
+    <!-- bootstrap 5 -->
+    <!-- CSS only -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!--bootstrap icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--lightbox for the image-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <!-- CSS, розмістити в кінці для надання пріоритету стилів CSS -->
+    <link rel="stylesheet" href="{% static 'mainapp/css/styles.css' %}">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{% url 'index' %}" style="color: rgb(190, 55, 69);">
+                    <b>FERMA</b>&nbsp;
+                    <span class="badge text-bg-danger">New</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="{% url 'index' %}">Головна</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="{% url 'about_us' %}">Про нас</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="{% url 'bank_details' %}">Банківські резвізити</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% url 'booking' %}">Бронювання</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="{% url 'contact_us' %}">Контакти</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Документи
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{% url 'rules_of_stay' %}">Правила перебування</a></li>
+                        <li><a class="dropdown-item" href="{% url 'check_in_rules' %}">Правила заселення</a></li>
+                        <li><a class="dropdown-item" href="{% url 'booking_rules' %}">Правила бронювання</a></li>
+                        <li><a class="dropdown-item" href="{% url 'privacy_policy' %}">Політика конфіденційності</a></li>
+                      </ul>
+                    </li>
+
+                        {% if request.user.is_authenticated %}
+                        <!--Clinic Staff Link-->
+                        {% if request.user.is_staff %} <!-- if user is staff -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'staffPanel' %}">Панель персоналу</a>
+                        </li>
+                        {% endif %} <!-- end if user is staff -->
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Користувач
+                            </a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="{% url 'userPanel' %}">Панель користувача</a></li>
+                              <li><hr class="dropdown-divider"></li>
+                              <li><a class="dropdown-item" href="{% url 'logout' %}">Вийти з акаунту</a></li>
+                            </ul>
+                        </li>
+                        {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'login' %}">Увійти/Зареєструватися</a>
+                        </li>
+                        {% endif %}
+
+                  </ul>
+                </div>
+            </div>
+        </nav>
+
+<!--        &lt;!&ndash; Temporary message block &ndash;&gt;-->
+<!--        <div class="alert alert-warning text-center" role="alert">-->
+<!--            <i class="bi bi-exclamation-circle fs-2"></i>&nbsp;-->
+<!--            <span class="fs-4">-->
+<!--                Cторінка перебуває у стані розробки. <br />-->
+<!--                Просимо не здійснювати дій, повʼязаних із реєстрацією та бронюванням-->
+<!--            </span>-->
+<!--        </div>-->
+<!--        &lt;!&ndash; end Temporary message block &ndash;&gt;-->
+
+
+        <!--Messages Start-->
+        {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-success  alert-dismissible fade show text-center " role="alert">
+                <h3 class="display-3">{{ message }}</h3>
+                <button type="button" class="btn-close fs-1 position-absolute top-50 start-0 translate-middle-y" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        {% endfor %}
+        {% endif %}
+        <!--Messages End-->
+    </header>
+
+    {% block screensaver %}
+    {% endblock screensaver %}
+
+    {% block post %}
+    {% endblock post %}
+
+    {% block content %}
+    {% endblock %}
+
+    {% block h_house  %}
+    {% endblock %}
+
+<div class="container">
+
+  <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+
+    <div class="col mb-3">
+<!--      <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">-->
+<!--        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>-->
+<!--      </a>-->
+
+                <a class="navbar-brand" href="{% url 'index' %}" style="color: red">
+                    FERMA&nbsp;
+                    <span class="badge text-bg-danger">New</span>
+                </a>
+<!--      <p class="text-muted">відпочинковий <br />комплекс</p>-->
+    </div>
+
+    <div class="col mb-3">
+
+    </div>
+
+    <div class="col mb-3">
+      <h5>Гостьові будинки</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="{% url 'holiday_house_1' %}" class="nav-link p-0 text-muted">Будинок 1</a></li>
+        <li class="nav-item mb-2"><a href="{% url 'holiday_house_2' %}" class="nav-link p-0 text-muted">Будинок 2</a></li>
+        <li class="nav-item mb-2"><a href="{% url 'holiday_house_3' %}" class="nav-link p-0 text-muted">Будинок 3</a></li>
+        <li class="nav-item mb-2"><a href="{% url 'holiday_house_4' %}" class="nav-link p-0 text-muted">Будинок 4</a></li>
+        <li class="nav-item mb-2"><a href="{% url 'holiday_house_5' %}" class="nav-link p-0 text-muted">Будинок 5</a></li>
+        <li class="nav-item mb-2"><a href="{% url 'holiday_house_6' %}" class="nav-link p-0 text-muted">Будинок 6</a></li>
+        <li class="nav-item mb-2"><a href="{% url 'holiday_house_7' %}" class="nav-link p-0 text-muted">Будинок 7</a></li>
+      </ul>
+    </div>
+
+    <div class="col mb-3">
+      <h5>Додаткові послуги</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Чан на травах</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Джакузі</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Шатро</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Додаткове спальне місце</a></li>
+      </ul>
+    </div>
+
+    <div class="col mb-3">
+      <h5>Посилання</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="{% url 'index' %}" class="nav-link p-0 text-muted">Головна сторінка</a></li>
+        <li class="nav-item mb-2"><a href="{% url 'about_us' %}" class="nav-link p-0 text-muted">Про нас</a></li>
+        <li class="nav-item mb-2"><a href="{% url 'booking' %}" class="nav-link p-0 text-muted">Бронювання</a></li>
+        <li class="nav-item mb-2"><a href="{% url 'contact_us' %}" class="nav-link p-0 text-muted">Звʼязатися з нами</a></li>
+        <li class="nav-item mb-2"><a href="tel: +380967555757" class="nav-link p-0 text-muted">Тел: +38 096 755 57 57</a></li>
+        <li class="nav-item mb-2"><a href="{% url 'privacy_policy' %}" class="nav-link p-0 text-muted">Політика конфіденційності</a></li>
+      </ul>
+    </div>
+
+  </footer>
+    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+      <p>&#9400; Відпочинковий комплекс «ФЕРМА», 2022-{% current_year %}</p>
+      <ul class="list-unstyled d-flex">
+          <a href="https://www.instagram.com/ferma.new/" id=""><i class="bi bi-instagram mx-2"></i></a>
+      </ul>
+    </div>
+</div>
+
+      <!--підключення boootstrap стилів, вимога вкінці, перед закриттям /body (раніще розміщувалося одразу після body зверху) -->
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Lightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <!-- MDB -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.umd.min.js"
+    ></script>
+
+</body>
+</html>

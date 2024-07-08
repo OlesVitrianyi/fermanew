@@ -1,0 +1,83 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+    <div class="container my-5">
+        <div class="text-center" style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">
+            <h1 class="fs-1" style="letter-spacing: 0.7em; margin-right: -0.6em;">FERMA NEW</h1>
+            <h2 class="fs-4 mt-3" style="letter-spacing:0.32em;">відпочинковий комплекс</h2>
+        </div>
+    </div>
+
+
+    <div id="container_post" class="container-md pt-5">
+        <div class="row justify-content-md-center">
+            <div class="col-lg-8">
+
+                <h2>Про нас</h2>
+                <br />
+
+                <h3 style="font-size: 23px">Ми розташовані</h3>
+                    <div style="font-size: 16px">
+                        <p>
+                            вул. Зарічна, 38, с. Головчинці, Хмельницький район, Хмельницька область, 31533
+                        </p>
+                    </div>
+                        <!-- google map -->
+                        <!--<iframe class="w-100 pt-3" height="150" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2605.39376921507!2d28.43630228162566!3d49.23102315495656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472d5d498e166399%3A0x35bd8ea3657f2d5c!2sBE%20FIT!5e0!3m2!1suk!2sua!4v1627240004864!5m2!1suk!2sua" style="border:0;" allowfullscreen="" loading="lazy"></iframe>-->
+<!--                        <iframe class="w-100 pt-3" height="150" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4596.054314958685!2d27.014108562449426!3d49.44116435274489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473207a474fcb4a3%3A0x69a270b4bdfa9d13!2z0J7Qt9C10YDQvdCwINCy0YPQu9C40YbRjywgMjAsINCl0LzQtdC70YzQvdC40YbRjNC60LjQuSwg0KXQvNC10LvRjNC90LjRhtGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgMjkwMDA!5e0!3m2!1suk!2sua!4v1648722307938!5m2!1suk!2sua" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>-->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2023.6422531744827!2d27.466242945686712!3d49.42851935914747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472d8b6ebea6fdd7%3A0xae2b82c69bd408a5!2z0KTQtdGA0LzQsA!5e0!3m2!1sru!2sua!4v1719325909943!5m2!1sru!2sua" width="100%" height="360" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <br />
+                            <div class="pt-3" id="tel">
+                                <i class="bi bi-phone-fill"></i><a href="tel:+380967555757">Тел: +38 096 755 57 57</a><br>
+                            </div>
+                        <p><i class="bi bi-envelope-fill"></i><a href="mailto:fermanew.com@gmail.com">&nbsp;fermanew.com@gmail.com</a><br>
+
+
+                <h2 class="pt-3" style="font-size: 23px">Ми працюємо</h2>
+                <div class="pt-2" style="font-size: 16px">
+                    Пн 9:00-18:00<br>
+                    Вт 9:00-18:00<br>
+                    Ср 9:00-18:00<br>
+                    Чт 9:00-18:00<br>
+                    Пт 9:00-18:00<br>
+                    Сб 9:00-18:00<br>
+                    <div style="color:#DC3545">Нд - 9:00-18:00</div><br>
+                </div>
+
+                <div id="bank_account">
+                    <h3>Реквізити банківського рахунку</h3>
+<!--                    <table class="table table-striped table-hover table-responsive">-->
+                    <table class="table table-borderless table-striped table-hover table-responsive">
+                      <tbody>
+                        <tr>
+                          <td><b>ОТРИМУВАЧ</b></td>
+                          <td> (зразок)КРЕДИТНА СПІЛКА "СЕЙФТІ ДЕПОЗІТ"</td>
+                        </tr>
+                        <tr>
+                          <td><b>ЄДРПОУ спілки</b></td>
+                          <td>(зразок)40434582</td>
+                        </tr>
+                        <tr>
+                          <td><b>БАНК ОТРИМУВАЧ</b></td>
+                          <td>(зразок)ФХМЕЛЬНИЦЬКЕ ОБЛАС УПРАТОЩАД М.ХМЕЛЬН.</td>
+                        </tr>
+                        <tr>
+                          <td><b>МФО банку</b></td>
+                          <td>(зразок)315784</td>
+                        </tr>
+                        <tr>
+                          <td><b>РАХУНОК IBAN</b></td>
+                          <td>(зразок)UA263157840000026<br>505300812781(UAH)</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}

@@ -1,0 +1,63 @@
+<title>Реєстрація користувача Ferma New</title>
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+    <div class="container my-5">
+        <div class="text-center" style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">
+            <h1 class="fs-1" style="letter-spacing: 0.7em; margin-right: -0.6em;">FERMA NEW</h1>
+            <h2 class="fs-4 mt-3" style="letter-spacing:0.32em;">відпочинковий комплекс</h2>
+        </div>
+    </div>
+
+    <div class="container-md pt-5">
+        <div class="row justify-content-md-center">
+            <div class="col-lg-8">
+
+                {% if user.is_authenticated %}
+                    <div class="text-center">
+                        <div class="alert alert-success fs-3" role="alert">
+                            Ви вже увійшли!
+                        </div>
+                    </div>
+                {% else %}
+                    <h2 class="text-black p-3 text-center">
+                        РЕЄСТРАЦІЯ<br />
+                        користувача сайту
+                    </h2>
+
+                    <div class="mt-5">
+                <!--<div class="shadow p-4 mb-5 bg-body bg-body rounded text-black  m-5">-->
+                        <div class="card border-0 shadow m-3 p-3">
+                            <form method="POST" action="{% url 'register' %}">
+                                {% csrf_token %}
+                    <!--        <p style="color: red">Просимо у розділі "Імʼя користувача" вказали номер Вашого мобільного телефону (для узгодження деталей Вашого відпочинку).</p>-->
+                                {{ form.as_p }}
+                                <br/>
+                                <div class="text-center">
+                                    <div class="alert alert-primary" role="alert">
+                                      Натискаючи "НАДІСЛАТИ" я підтверджую, що погоджуюсь із
+                                      <a href="{% url 'privacy_policy' %}" class="alert-link">Політикою конфіденційності</a>
+                                      відпочинкового комплексу FERMA NEW
+                                    </div>
+                                    <br />
+                                    <button type="submit" class="btn btn-primary">Надіслати</button>
+                                    <br />
+                                </div>
+                                <div class="text-center">
+                                    <label class="form-label fs-3 mt-5">Вже є аккаунт?</label>
+                                    <br />
+                                    <a href="{% url 'login' %}" class="btn btn-primary">Увійти</a>
+                                </div>
+                            </form>
+                        </div>
+                        <br /><br /><br />
+                    </div>
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

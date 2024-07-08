@@ -1,0 +1,1354 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+
+
+{% block screensaver %}
+    <div
+    class="p-0 bg-image position-relative"
+    style="
+      background-image: url('{% static 'mainapp/images/background/farm_hadgehog.png' %}');
+      background-size: 1500px;
+      height: 600px;
+      width: auto;
+    ">
+
+      <div class="position-absolute top-50 start-50 translate-middle text-center" style="color: white">
+        <h1 class="display-1" style="letter-spacing: 0.3em; margin-right: -0.2em">FERMA NEW</h1>
+          <p class="fs-4 mt-3" style="letter-spacing:0.65em">відпочинковий комплекс</p>
+          <a type="button" class="btn btn-outline-light  mt-4" href="{% url 'booking' %}">Бронювання</a>
+      </div>
+
+    </div>
+
+
+<!-- Video carousel wrapper -->
+<div id="carouselVideo" data-mdb-carousel-init class="carousel slide carousel-fade" data-mdb-ride="carousel">
+  <!-- Inner text-->
+  <div class="carousel-inner">
+    <!-- Single item -->
+    <div class="carousel-item active position-relative">
+      <video class="img-fluid" autoplay loop muted>
+        <source src="{% static 'mainapp/video/carousel/Tropical.mp4' %}" type="video/mp4"/>
+      </video>
+<!--      <div class="position-absolute top-50 start-50 translate-middle text-center" style="color: white">-->
+<!--        <h1 class="display-1" style="letter-spacing: 0.7em; margin-right: -0.6em">ФЕРМА</h1>-->
+<!--        <p class="fs-4 mt-3" style="letter-spacing:0.4em">відпочинковий комплекс</p>-->
+<!--        <a type="button" class="btn btn-outline-light  mt-4" href="{% url 'booking' %}">Бронювання</a>-->
+<!--      </div>-->
+        <div class="position-absolute top-50 start-50 translate-middle text-center" style="color: white">
+          <h1 class="fs-1 display-1" style="letter-spacing: 0.3em; margin-right: -0.2em">FERMA NEW</h1>
+            <p class="fs-6 mt-3" style="letter-spacing:0.35em">відпочинковий комплекс</p>
+              <a type="button" class="btn btn-outline-light  mt-2 btn-sm margin-right: -0.2em" href="{% url 'booking' %}">Бронювання</a>
+        </div>
+    </div>
+
+    <!-- Single item -->
+    <div class="carousel-item position-relative">
+      <video class="img-fluid" autoplay loop muted>
+        <source src="https://mdbcdn.b-cdn.net/img/video/forest.mp4" type="video/mp4"/>
+      </video>
+<!--      <div class="position-absolute top-50 start-50 translate-middle text-center" style="color: white">-->
+<!--        <h1 class="display-1" style="letter-spacing: 0.7em; margin-right: -0.6em">ФЕРМА</h1>-->
+<!--        <p class="fs-4 mt-3" style="letter-spacing:0.4em">відпочинковий комплекс</p>-->
+<!--        <a type="button" class="btn btn-outline-light  mt-4" href="{% url 'booking' %}">Бронювання</a>-->
+<!--      </div>-->
+        <div class="position-absolute top-50 start-50 translate-middle text-center" style="color: white">
+          <h1 class="fs-1 display-1" style="letter-spacing: 0.3em; margin-right: -0.2em">FERMA NEW</h1>
+            <p class="fs-6 mt-3" style="letter-spacing:0.35em">відпочинковий комплекс</p>
+              <a type="button" class="btn btn-outline-light  mt-2 btn-sm margin-right: -0.2em" href="{% url 'booking' %}">Бронювання</a>
+        </div>
+    </div>
+
+    <!-- Single item -->
+    <div class="carousel-item position-relative">
+      <video class="img-fluid" autoplay loop muted>
+        <source src="https://mdbcdn.b-cdn.net/img/video/Agua-natural.mp4" type="video/mp4"/>
+      </video>
+<!--      <div class="position-absolute top-50 start-50 translate-middle text-center" style="color: white">-->
+<!--        <h1 class="display-1" style="letter-spacing: 0.7em; margin-right: -0.6em">ФЕРМА</h1>-->
+<!--        <p class="fs-4 mt-3" style="letter-spacing:0.4em">відпочинковий комплекс</p>-->
+<!--        <a type="button" class="btn btn-outline-light  mt-4" href="{% url 'booking' %}">Бронювання</a>-->
+<!--      </div>-->
+        <div class="position-absolute top-50 start-50 translate-middle text-center" style="color: white">
+          <h1 class="fs-1 display-1" style="letter-spacing: 0.3em; margin-right: -0.2em">FERMA NEW</h1>
+            <p class="fs-6 mt-3" style="letter-spacing:0.35em">відпочинковий комплекс</p>
+              <a type="button" class="btn btn-outline-light  mt-2 btn-sm margin-right: -0.2em" href="{% url 'booking' %}">Бронювання</a>
+        </div>
+    </div>
+  </div>
+  <!-- end Inner Text -->
+
+  <!-- Controls -->
+  <button class="carousel-control-prev" type="button" data-mdb-target="#carouselVideo" data-mdb-slide="prev">
+    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+    </svg>
+  </button>
+  <button class="carousel-control-next" type="button" data-mdb-target="#carouselVideo" data-mdb-slide="next">
+    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+    </svg>
+  </button>
+  <!-- end Controls -->
+</div>
+<!-- end Video carousel wrapper -->
+
+{% endblock screensaver %}
+
+
+{% block post %}
+
+<div class="row align-items-md-stretch m-2">
+
+    <!-- advertisement post -->
+    {% for p in advertisement_post %}
+      <div class="col-md-6 p-2">
+        <div class="h-100 p-5 text-bg-success rounded-3 opacity-75">
+          <!-- show category of post -->
+          <h2>{{ p.cat }}</h2>
+          <h3>{{p.title}}</h3>
+          {% autoescape off %}
+            <p>{{p.content|linebreaks|truncatechars:170}}</p>
+          {% endautoescape %}
+          <a class="btn btn-outline-light" href="{{ p.get_absolute_url }}" role="button">Детальніше</a>
+        </div>
+      </div>
+    {% endfor %}
+  <!-- end advertisement post -->
+
+  <!-- information post -->
+    {% for p in information_post %}
+      <div class="col-md-6 p-2">
+        <div class="h-100 p-5 bg-warning rounded-3 opacity-75">
+          <h2>{{ p.cat }}</h2>
+          <h3>{{p.title}}</h3>
+          {% autoescape off %}
+            <p>{{p.content|linebreaks|truncatechars:170}}</p>
+          {% endautoescape %}
+          <a class="btn btn-outline-dark" href="{{ p.get_absolute_url }}" role="button">Детальніше</a>
+        </div>
+      </div>
+    {% endfor %}
+  <!-- end information post -->
+
+</div>
+
+{% endblock post %}
+
+{% block content %}
+
+<!-- Holiday Houses -->
+
+<div class="album py-5">
+  <div class="container">
+
+      <h2 class="text-center mb-4">
+        ГОСТЬОВІ БУДИНКИ<br />
+        та додаткові послуги
+      </h2>
+
+
+<!--      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">-->
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+
+        <!-- Holiday House 1 -->
+        <div class="col">
+          <div class="card border-0 shadow">
+            <div>
+              <a href="{% static 'mainapp/images/holiday_house/1/h_house1.1.png' %}" data-lightbox="image-1">
+                <!--miniature 16:9 (250x140 px) at a weight of 50 kilobytes-->
+                <img class="bd-placeholder-img card-img-top" width="100%" height="100%" src="{% static 'mainapp/images/holiday_house/1/h_house1.1.png' %}" alt="Thumbnail">
+
+                <div class="card-img-overlay" style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">
+                  <h3 class="card-title">Будинок 1</h3>
+                  <p class="card-text">
+                    <span>Вмістимість: 2-4 особи</span>
+                  </p>
+                </div>
+              </a>
+              <a href="{% static 'mainapp/images/holiday_house/1/h_house1.2.png' %}" data-lightbox="image-1" style="display: none;">
+                  <img src="{% static 'mainapp/images/holiday_house/1/h_house1.2.png' %}" alt="Additional Image 1">
+              </a>
+              <a href="{% static 'mainapp/images/holiday_house/1/h_house1.3.png' %}" data-lightbox="image-1" style="display: none;">
+                  <img src="{% static 'mainapp/images/holiday_house/1/h_house1.3.png' %}" alt="Additional Image 2">
+              </a>
+            </div>
+
+            <div class="card-body">
+              <div class="card-text">
+                <p>A-Frame будиночок відкритого планування</p>
+              </div>
+
+              <!-- accordion -->
+              <div class="accordion accordion-flush pb-2" id="accordionFlush_hhouse1">
+                <div class="accordion-item">
+                  <h4 class="accordion-header" id="flush-headingOne_hhouse1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne_hhouse1" aria-expanded="false" aria-controls="flush-collapseOne_hhouse1">
+                      1-й поверх
+                    </button>
+                  </h4>
+                  <div id="flush-collapseOne_hhouse1" class="accordion-collapse collapse" aria-labelledby="flush-headingOne_hhouse1" data-bs-parent="#accordionFlush_hhouse1">
+                    <div class="accordion-body">
+                      <p>Кухня: посуд на 6 осіб, мікрохвильовка, електроплита, електрочайник, мийка, капсульна кавомашина Nespresso.</p>
+                      <p>Джерельна вода для пиття</p>
+                      <p>Диван розкладний. Стіл та 4 табуретки. Холодильник</p>
+                      <p>Санвузол з душем, фен, рушники.</p>
+                      <p>Тераса зі столом.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h4 class="accordion-header" id="flush-headingTwo_hhouse1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo_hhouse1" aria-expanded="false" aria-controls="flush-collapseTwo_hhouse1">
+                      2-й поверх
+                    </button>
+                  </h4>
+                  <div id="flush-collapseTwo_hhouse1" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo_hhouse1" data-bs-parent="#accordionFlush_hhouse1">
+                    <div class="accordion-body">
+                      <p>Двоспальне ліжко</p>
+                      <p>Балкончик</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h4 class="accordion-header" id="flush-headingThree_hhouse1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree_hhouse1" aria-expanded="false" aria-controls="flush-collapseThree_hhouse1">
+                      Інше
+                    </button>
+                  </h4>
+                  <div id="flush-collapseThree_hhouse1" class="accordion-collapse collapse" aria-labelledby="flush-headingThree_hhouse1" data-bs-parent="#accordionFlush_hhouse1">
+                    <div class="accordion-body">
+                      <p>У вартість входить користування басейном, бесідкою, шампура, решітка, дрова.</p>
+                      <p>Є можливість доставити 1 односпальне розкладне ліжко. </p>
+                    </div>
+                  </div>
+                </div>
+<!--                <div class="accordion-item">-->
+<!--                  <h4 class="accordion-header" id="flush-headingFour_hhouse1">-->
+<!--                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour_hhouse1" aria-expanded="false" aria-controls="flush-collapseFour_hhouse1">-->
+<!--                      Розваги-->
+<!--                    </button>-->
+<!--                  </h4>-->
+<!--                  <div id="flush-collapseFour_hhouse1" class="accordion-collapse collapse" aria-labelledby="flush-headingFour_hhouse1" data-bs-parent="#accordionFlush_hhouse1">-->
+<!--                    <div class="accordion-body">-->
+<!--                      <p>Великий телевізор з плоским екраном</p>-->
+<!--                      <p>Xbox для ігор та задоволення</p>-->
+<!--                      <p>WiFi (Супутниковий StarLink) + гарно ловить LTE</p>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="accordion-item">-->
+<!--                  <h4 class="accordion-header" id="flush-headingFive_hhouse1">-->
+<!--                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive_hhouse1" aria-expanded="false" aria-controls="flush-collapseFive_hhouse1">-->
+<!--                      На свіжому повітрі-->
+<!--                    </button>-->
+<!--                  </h4>-->
+<!--                  <div id="flush-collapseFive_hhouse1" class="accordion-collapse collapse" aria-labelledby="flush-headingFive_hhouse1" data-bs-parent="#accordionFlush_hhouse1">-->
+<!--                    <div class="accordion-body">-->
+<!--                      <p>Спортивна риболовля (зловив / випустив)</p>-->
+<!--                      <p>Став сильно зариблено (особини до 15 кг)</p>-->
+<!--                      <p>Риба: щука, короп, товстолоб, карась, лин</p>-->
+<!--                      <p>Човни для риболовлі та прогулянок</p>-->
+<!--                      <p>Мангал, шампура, казанок та дрова</p>-->
+<!--                      <p>Сауна на 4-6 людей</p>-->
+<!--                      <p>Безлімітний чан та дрова до нього</p>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="accordion-item">-->
+<!--                  <h4 class="accordion-header" id="flush-headingSix_hhouse1">-->
+<!--                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix_hhouse1" aria-expanded="false" aria-controls="flush-collapseSix_hhouse1">-->
+<!--                      Інше-->
+<!--                    </button>-->
+<!--                  </h4>-->
+<!--                  <div id="flush-collapseSix_hhouse1" class="accordion-collapse collapse" aria-labelledby="flush-headingSix_hhouse1" data-bs-parent="#accordionFlush_hhouse1">-->
+<!--                    <div class="accordion-body">-->
+<!--                      <p>Можливість доставити столи та стільці на 20 посадочних місць</p>-->
+<!--                      <p>Перебування з тваринами оплачується додатково (500 грн/добу)</p>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+              </div>
+              <!-- end accordion -->
+              <!-- buttons group -->
+              <div class="container text-center">
+                <div class="row">
+                  <div class="d-grid gap-2">
+                    <div class="btn-group" role="group" aria-label="Дії для Будинку 1">
+                      <a class="btn btn-outline-primary" href="{% url 'holiday_house_1' %}" role="button">Деталі</a>
+                      <a class="btn btn-outline-primary" href="{% url 'holiday_house_1' %}" role="button">Календар</a>
+                      <a class="btn btn-outline-primary" href="{% url 'booking' %}" role="button">Бронь</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end buttons group -->
+            </div>
+          </div>
+        </div>
+        <!-- end Holiday House 1 -->
+
+        <!-- Holiday House 2 -->
+        <div class="col">
+          <div class="card border-0 shadow">
+            <div>
+              <a href="{% static 'mainapp/images/holiday_house/1/h_house1.1.png' %}" data-lightbox="image-1">
+                <img class="bd-placeholder-img card-img-top" width="100%" height="100%" src="{% static 'mainapp/images/holiday_house/1/h_house1.1.png' %}" alt="Thumbnail">
+
+                <div class="card-img-overlay" style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">
+                  <h3 class="card-title">Будинок 2</h3>
+                  <p class="card-text">
+                    <span>Вмістимість: 2-4 особи</span>
+                  </p>
+                </div>
+              </a>
+              <a href="{% static 'mainapp/images/holiday_house/1/h_house1.2.png' %}" data-lightbox="image-1" style="display: none;">
+                  <img src="{% static 'mainapp/images/holiday_house/1/h_house1.2.png' %}" alt="Additional Image 1">
+              </a>
+              <a href="{% static 'mainapp/images/holiday_house/1/h_house1.3.png' %}" data-lightbox="image-1" style="display: none;">
+                  <img src="{% static 'mainapp/images/holiday_house/1/h_house1.3.png' %}" alt="Additional Image 2">
+              </a>
+            </div>
+
+            <div class="card-body">
+              <div class="card-text">
+                <p>A-Frame будиночок відкритого планування</p>
+              </div>
+
+              <!-- accordion -->
+              <div class="accordion accordion-flush pb-2" id="accordionFlush_hhouse2">
+                <div class="accordion-item">
+                  <h4 class="accordion-header" id="flush-headingOne_hhouse2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne_hhouse2" aria-expanded="false" aria-controls="flush-collapseOne_hhouse2">
+                      1-й поверх
+                    </button>
+                  </h4>
+                  <div id="flush-collapseOne_hhouse2" class="accordion-collapse collapse" aria-labelledby="flush-headingOne_hhouse2" data-bs-parent="#accordionFlush_hhouse2">
+                    <div class="accordion-body">
+                      <p>Кухня: посуд на 6 осіб, мікрохвильовка, електроплита, електрочайник, мийка, капсульна кавомашина Nespresso.</p>
+                      <p>Джерельна вода для пиття</p>
+                      <p>Диван розкладний. Стіл та 4 табуретки. Холодильник</p>
+                      <p>Санвузол з душем, фен, рушники.</p>
+                      <p>Тераса зі столом.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h4 class="accordion-header" id="flush-headingTwo_hhouse2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo_hhouse2" aria-expanded="false" aria-controls="flush-collapseTwo_hhouse2">
+                      2-й поверх
+                    </button>
+                  </h4>
+                  <div id="flush-collapseTwo_hhouse2" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo_hhouse2" data-bs-parent="#accordionFlush_hhouse2">
+                    <div class="accordion-body">
+                      <p>Двоспальне ліжко</p>
+                      <p>Балкончик</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h4 class="accordion-header" id="flush-headingThree_hhouse2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree_hhouse2" aria-expanded="false" aria-controls="flush-collapseThree_hhouse2">
+                      Інше
+                    </button>
+                  </h4>
+                  <div id="flush-collapseThree_hhouse2" class="accordion-collapse collapse" aria-labelledby="flush-headingThree_hhouse2" data-bs-parent="#accordionFlush_hhouse2">
+                    <div class="accordion-body">
+                      <p>У вартість входить користування басейном, бесідкою, шампура, решітка, дрова.</p>
+                      <p>Є можливість доставити 1 односпальне розкладне ліжко. </p>
+                    </div>
+                  </div>
+                </div>
+<!--                <div class="accordion-item">-->
+<!--                  <h2 class="accordion-header" id="flush-headingFour_hhouse2">-->
+<!--                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour_hhouse2" aria-expanded="false" aria-controls="flush-collapseFour_hhouse2">-->
+<!--                      Розваги-->
+<!--                    </button>-->
+<!--                  </h2>-->
+<!--                  <div id="flush-collapseFour_hhouse2" class="accordion-collapse collapse" aria-labelledby="flush-headingFour_hhouse2" data-bs-parent="#accordionFlush_hhouse2">-->
+<!--                    <div class="accordion-body">-->
+<!--                      <p>Великий телевізор з плоским екраном</p>-->
+<!--                      <p>Xbox для ігор та задоволення</p>-->
+<!--                      <p>WiFi (Супутниковий StarLink) + гарно ловить LTE</p>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="accordion-item">-->
+<!--                  <h2 class="accordion-header" id="flush-headingFive_hhouse2">-->
+<!--                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive_hhouse2" aria-expanded="false" aria-controls="flush-collapseFive_hhouse2">-->
+<!--                      На свіжому повітрі-->
+<!--                    </button>-->
+<!--                  </h2>-->
+<!--                  <div id="flush-collapseFive_hhouse2" class="accordion-collapse collapse" aria-labelledby="flush-headingFive_hhouse2" data-bs-parent="#accordionFlush_hhouse2">-->
+<!--                    <div class="accordion-body">-->
+<!--                      <p>Спортивна риболовля (зловив / випустив)</p>-->
+<!--                      <p>Став сильно зариблено (особини до 15 кг)</p>-->
+<!--                      <p>Риба: щука, короп, товстолоб, карась, лин</p>-->
+<!--                      <p>Човни для риболовлі та прогулянок</p>-->
+<!--                      <p>Мангал, шампура, казанок та дрова</p>-->
+<!--                      <p>Сауна на 4-6 людей</p>-->
+<!--                      <p>Безлімітний чан та дрова до нього</p>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="accordion-item">-->
+<!--                  <h2 class="accordion-header" id="flush-headingSix_hhouse2">-->
+<!--                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix_hhouse2" aria-expanded="false" aria-controls="flush-collapseSix_hhouse2">-->
+<!--                      Інше-->
+<!--                    </button>-->
+<!--                  </h2>-->
+<!--                  <div id="flush-collapseSix_hhouse2" class="accordion-collapse collapse" aria-labelledby="flush-headingSix_hhouse2" data-bs-parent="#accordionFlush_hhouse2">-->
+<!--                    <div class="accordion-body">-->
+<!--                      <p>Можливість доставити столи та стільці на 20 посадочних місць</p>-->
+<!--                      <p>Перебування з тваринами оплачується додатково (500 грн/добу)</p>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+              </div>
+              <!-- end accordion -->
+              <!-- buttons group -->
+              <div class="container text-center">
+                <div class="row">
+                  <div class="d-grid gap-2">
+                    <div class="btn-group" role="group" aria-label="Дії для Будинку 2">
+                      <a class="btn btn-outline-primary" href="{% url 'holiday_house_2' %}" role="button">Деталі</a>
+                      <a class="btn btn-outline-primary" href="{% url 'holiday_house_2' %}" role="button">Календар</a>
+                      <a class="btn btn-outline-primary" href="{% url 'booking' %}" role="button">Бронь</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end buttons group -->
+            </div>
+          </div>
+        </div>
+        <!-- end Holiday House 2 -->
+
+        <!-- Holiday House 3 -->
+        <div class="col">
+          <div class="card border-0 shadow">
+            <div>
+              <a href="{% static 'mainapp/images/holiday_house/1/h_house1.1.png' %}" data-lightbox="image-1">
+                <img class="bd-placeholder-img card-img-top" width="100%" height="100%" src="{% static 'mainapp/images/holiday_house/1/h_house1.1.png' %}" alt="Thumbnail">
+
+                <div class="card-img-overlay" style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">
+                  <h3 class="card-title">Будинок 3</h3>
+                  <p class="card-text">
+                    <span>Вмістимість: 6-8 осіб</span>
+                  </p>
+                </div>
+              </a>
+              <a href="{% static 'mainapp/images/holiday_house/1/h_house1.2.png' %}" data-lightbox="image-1" style="display: none;">
+                  <img src="{% static 'mainapp/images/holiday_house/1/h_house1.2.png' %}" alt="Additional Image 1">
+              </a>
+              <a href="{% static 'mainapp/images/holiday_house/1/h_house1.3.png' %}" data-lightbox="image-1" style="display: none;">
+                  <img src="{% static 'mainapp/images/holiday_house/1/h_house1.3.png' %}" alt="Additional Image 2">
+              </a>
+            </div>
+
+            <div class="card-body">
+              <div class="card-text">
+                <p>A-Frame будиночок на 3 спальні та кухня студія з розкладним диваном.</p>
+<!--                <p>Виїзд: 12:00</p>-->
+<!--                <p>Перебування з тваринами: 500 грн/добу</p>-->
+              </div>
+
+              <!-- accordion -->
+              <div class="accordion accordion-flush pb-2" id="accordionFlush_hhouse3">
+                <div class="accordion-item">
+                  <h4 class="accordion-header" id="flush-headingOne_hhouse3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne_hhouse3" aria-expanded="false" aria-controls="flush-collapseOne_hhouse3">
+                      1-й поверх
+                    </button>
+                  </h4>
+                  <div id="flush-collapseOne_hhouse3" class="accordion-collapse collapse" aria-labelledby="flush-headingOne_hhouse3" data-bs-parent="#accordionFlush_hhouse3">
+                    <div class="accordion-body">
+                      <p>Санвузол з душем.</p>
+                      <p>Спальня з двоспальним ліжком, з можливістю доставити розкладне ліжко.</p>
+                      <p><b>Кухня:</b> Телевізор, Стіл на 10 осіб. Табуретки 10 шт. Посуд на 10 персон.
+                        Електроплита, електрочайник, мікрохвильовка, кондиціонер, холодильник, кавомашина капсульна.
+                        Вода для пиття з джерела. Шампура, решітка, мангал.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h4 class="accordion-header" id="flush-headingTwo_hhouse3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo_hhouse3" aria-expanded="false" aria-controls="flush-collapseTwo_hhouse3">
+                      2-й поверх
+                    </button>
+                  </h4>
+                  <div id="flush-collapseTwo_hhouse3" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo_hhouse3" data-bs-parent="#accordionFlush_hhouse3">
+                    <div class="accordion-body">
+                      <p>Санвузол</p>
+                      <p>1 спальня з двоспальним ліжком</p>
+                      <p>2 спальня з двома односпальними ліжками</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h4 class="accordion-header" id="flush-headingThree_hhouse3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree_hhouse3" aria-expanded="false" aria-controls="flush-collapseThree_hhouse3">
+                      Інше
+                    </button>
+                  </h4>
+                  <div id="flush-collapseThree_hhouse3" class="accordion-collapse collapse" aria-labelledby="flush-headingThree_hhouse3" data-bs-parent="#accordionFlush_hhouse3">
+                    <div class="accordion-body">
+                      <p>Вартість 6100 грн.</p>
+                      <p>У вартість входить басейн для 8 осіб (кожен наступний - 200 грн).</p>
+                    </div>
+                  </div>
+                </div>
+<!--                <div class="accordion-item">-->
+<!--                  <h2 class="accordion-header" id="flush-headingFour_hhouse3">-->
+<!--                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour_hhouse3" aria-expanded="false" aria-controls="flush-collapseFour_hhouse3">-->
+<!--                      Розваги-->
+<!--                    </button>-->
+<!--                  </h2>-->
+<!--                  <div id="flush-collapseFour_hhouse3" class="accordion-collapse collapse" aria-labelledby="flush-headingFour_hhouse3" data-bs-parent="#accordionFlush_hhouse3">-->
+<!--                    <div class="accordion-body">-->
+<!--                      <p>Великий телевізор з плоским екраном</p>-->
+<!--                      <p>Xbox для ігор та задоволення</p>-->
+<!--                      <p>WiFi (Супутниковий StarLink) + гарно ловить LTE</p>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="accordion-item">-->
+<!--                  <h2 class="accordion-header" id="flush-headingFive_hhouse3">-->
+<!--                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive_hhouse3" aria-expanded="false" aria-controls="flush-collapseFive_hhouse3">-->
+<!--                      На свіжому повітрі-->
+<!--                    </button>-->
+<!--                  </h2>-->
+<!--                  <div id="flush-collapseFive_hhouse3" class="accordion-collapse collapse" aria-labelledby="flush-headingFive_hhouse3" data-bs-parent="#accordionFlush_hhouse3">-->
+<!--                    <div class="accordion-body">-->
+<!--                      <p>Спортивна риболовля (зловив / випустив)</p>-->
+<!--                      <p>Став сильно зариблено (особини до 15 кг)</p>-->
+<!--                      <p>Риба: щука, короп, товстолоб, карась, лин</p>-->
+<!--                      <p>Човни для риболовлі та прогулянок</p>-->
+<!--                      <p>Мангал, шампура, казанок та дрова</p>-->
+<!--                      <p>Сауна на 4-6 людей</p>-->
+<!--                      <p>Безлімітний чан та дрова до нього</p>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="accordion-item">-->
+<!--                  <h2 class="accordion-header" id="flush-headingSix_hhouse3">-->
+<!--                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix_hhouse3" aria-expanded="false" aria-controls="flush-collapseSix_hhouse3">-->
+<!--                      Інше-->
+<!--                    </button>-->
+<!--                  </h2>-->
+<!--                  <div id="flush-collapseSix_hhouse3" class="accordion-collapse collapse" aria-labelledby="flush-headingSix_hhouse3" data-bs-parent="#accordionFlush_hhouse3">-->
+<!--                    <div class="accordion-body">-->
+<!--                      <p>Можливість доставити столи та стільці на 20 посадочних місць</p>-->
+<!--                      <p>Перебування з тваринами оплачується додатково (500 грн/добу)</p>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+              </div>
+              <!-- end accordion -->
+              <!-- buttons group -->
+              <div class="container text-center">
+                <div class="row">
+                  <div class="d-grid gap-2">
+                    <div class="btn-group" role="group" aria-label="Дії для Будинку 3">
+                      <a class="btn btn-outline-primary" href="{% url 'holiday_house_3' %}" role="button">Деталі</a>
+                      <a class="btn btn-outline-primary" href="{% url 'holiday_house_3' %}" role="button">Календар</a>
+                      <a class="btn btn-outline-primary" href="{% url 'booking' %}" role="button">Бронь</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end buttons group -->
+            </div>
+          </div>
+        </div>
+        <!-- end Holiday House 3 -->
+
+        <!-- Holiday House 4 -->
+        <div class="col">
+          <div class="card border-0 shadow">
+            <div>
+              <a href="{% static 'mainapp/images/holiday_house/1/h_house1.1.png' %}" data-lightbox="image-1">
+                <img class="bd-placeholder-img card-img-top" width="100%" height="100%" src="{% static 'mainapp/images/holiday_house/1/h_house1.1.png' %}" alt="Thumbnail">
+
+                <div class="card-img-overlay" style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">
+                  <h3 class="card-title">Будинок 4</h3>
+                  <p class="card-text">
+                    <span>Вмістимість: 4 особи</span>
+                  </p>
+                </div>
+              </a>
+              <a href="{% static 'mainapp/images/holiday_house/1/h_house1.2.png' %}" data-lightbox="image-1" style="display: none;">
+                  <img src="{% static 'mainapp/images/holiday_house/1/h_house1.2.png' %}" alt="Additional Image 1">
+              </a>
+              <a href="{% static 'mainapp/images/holiday_house/1/h_house1.3.png' %}" data-lightbox="image-1" style="display: none;">
+                  <img src="{% static 'mainapp/images/holiday_house/1/h_house1.3.png' %}" alt="Additional Image 2">
+              </a>
+            </div>
+
+            <div class="card-body">
+              <div class="card-text">
+                <p>Одноповерховий будинок на 2 окремі спальні з кухнею та санвузлом.</p>
+              </div>
+
+              <!-- accordion -->
+              <div class="accordion accordion-flush pb-2" id="accordionFlush_hhouse4">
+                <div class="accordion-item">
+                  <h4 class="accordion-header" id="flush-headingOne_hhouse4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne_hhouse4" aria-expanded="false" aria-controls="flush-collapseOne_hhouse4">
+                      Спальні
+                    </button>
+                  </h4>
+                  <div id="flush-collapseOne_hhouse4" class="accordion-collapse collapse" aria-labelledby="flush-headingOne_hhouse4" data-bs-parent="#accordionFlush_hhouse4">
+                    <div class="accordion-body">
+                      <p>1 спальня: двоспальне ліжко</p>
+                      <p>2 спальня: двоспальне ліжко</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h4 class="accordion-header" id="flush-headingTwo_hhouse4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo_hhouse4" aria-expanded="false" aria-controls="flush-collapseTwo_hhouse4">
+                      Кухня
+                    </button>
+                  </h4>
+                  <div id="flush-collapseTwo_hhouse4" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo_hhouse4" data-bs-parent="#accordionFlush_hhouse4">
+                    <div class="accordion-body">
+                      <p>Стіл розкладний, 4 стільці.</p>
+                      <p>Холодильник міні. Кавомашина. Кондиціонер. Телевізор. Мікрохвильовка, чайник. </p>
+                      <p> Посуд на 6 осіб.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h4 class="accordion-header" id="flush-headingThree_hhouse4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree_hhouse4" aria-expanded="false" aria-controls="flush-collapseThree_hhouse4">
+                      Інше
+                    </button>
+                  </h4>
+                  <div id="flush-collapseThree_hhouse4" class="accordion-collapse collapse" aria-labelledby="flush-headingThree_hhouse4" data-bs-parent="#accordionFlush_hhouse4">
+                    <div class="accordion-body">
+                      <p>Санвузол: душ, умивальник, фен, бойлер, рушники</p>
+                      <p>Мангал, решітка, шампура та басейн входять у вартість.а</p>
+                      <p>Є можливість доставити розкладне ліжко. </p>
+                    </div>
+                  </div>
+                </div>
+<!--                <div class="accordion-item">-->
+<!--                  <h2 class="accordion-header" id="flush-headingFour_hhouse4">-->
+<!--                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour_hhouse4" aria-expanded="false" aria-controls="flush-collapseFour_hhouse4">-->
+<!--                      Розваги-->
+<!--                    </button>-->
+<!--                  </h2>-->
+<!--                  <div id="flush-collapseFour_hhouse4" class="accordion-collapse collapse" aria-labelledby="flush-headingFour_hhouse4" data-bs-parent="#accordionFlush_hhouse4">-->
+<!--                    <div class="accordion-body">-->
+<!--                      <p>Великий телевізор з плоским екраном</p>-->
+<!--                      <p>Xbox для ігор та задоволення</p>-->
+<!--                      <p>WiFi (Супутниковий StarLink) + гарно ловить LTE</p>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="accordion-item">-->
+<!--                  <h2 class="accordion-header" id="flush-headingFive_hhouse4">-->
+<!--                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive_hhouse4" aria-expanded="false" aria-controls="flush-collapseFive_hhouse4">-->
+<!--                      На свіжому повітрі-->
+<!--                    </button>-->
+<!--                  </h2>-->
+<!--                  <div id="flush-collapseFive_hhouse4" class="accordion-collapse collapse" aria-labelledby="flush-headingFive_hhouse4" data-bs-parent="#accordionFlush_hhouse4">-->
+<!--                    <div class="accordion-body">-->
+<!--                      <p>Спортивна риболовля (зловив / випустив)</p>-->
+<!--                      <p>Став сильно зариблено (особини до 15 кг)</p>-->
+<!--                      <p>Риба: щука, короп, товстолоб, карась, лин</p>-->
+<!--                      <p>Човни для риболовлі та прогулянок</p>-->
+<!--                      <p>Мангал, шампура, казанок та дрова</p>-->
+<!--                      <p>Сауна на 4-6 людей</p>-->
+<!--                      <p>Безлімітний чан та дрова до нього</p>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="accordion-item">-->
+<!--                  <h2 class="accordion-header" id="flush-headingSix_hhouse4">-->
+<!--                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix_hhouse4" aria-expanded="false" aria-controls="flush-collapseSix_hhouse4">-->
+<!--                      Інше-->
+<!--                    </button>-->
+<!--                  </h2>-->
+<!--                  <div id="flush-collapseSix_hhouse4" class="accordion-collapse collapse" aria-labelledby="flush-headingSix_hhouse4" data-bs-parent="#accordionFlush_hhouse4">-->
+<!--                    <div class="accordion-body">-->
+<!--                      <p>Можливість доставити столи та стільці на 20 посадочних місць</p>-->
+<!--                      <p>Перебування з тваринами оплачується додатково (500 грн/добу)</p>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+              </div>
+              <!-- end accordion -->
+              <!-- buttons group -->
+              <div class="container text-center">
+                <div class="row">
+                  <div class="d-grid gap-2">
+                    <div class="btn-group" role="group" aria-label="Дії для Будинку 4">
+                      <a class="btn btn-outline-primary" href="{% url 'holiday_house_4' %}" role="button">Деталі</a>
+                      <a class="btn btn-outline-primary" href="{% url 'holiday_house_4' %}" role="button">Календар</a>
+                      <a class="btn btn-outline-primary" href="{% url 'booking' %}" role="button">Бронь</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end buttons group -->
+            </div>
+          </div>
+        </div>
+        <!-- end Holiday House 4 -->
+
+        <!-- Holiday House 5 -->
+        <div class="col">
+          <div class="card border-0 shadow">
+            <div>
+              <a href="{% static 'mainapp/images/holiday_house/1/h_house1.1.png' %}" data-lightbox="image-1">
+                <img class="bd-placeholder-img card-img-top" width="100%" height="100%" src="{% static 'mainapp/images/holiday_house/1/h_house1.1.png' %}" alt="Thumbnail">
+
+                <div class="card-img-overlay" style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">
+                  <h3 class="card-title">Будинок 5</h3>
+                  <p class="card-text">
+                    <span>Кількість спальних місць: 6 (3 двоспальні ліжка) + 6 (розкладні дивани) = 12</span><br />
+                    <span>Максимальна кількість гостей: 12</span>
+                  </p>
+                </div>
+              </a>
+              <a href="{% static 'mainapp/images/holiday_house/1/h_house1.2.png' %}" data-lightbox="image-1" style="display: none;">
+                  <img src="{% static 'mainapp/images/holiday_house/1/h_house1.2.png' %}" alt="Additional Image 1">
+              </a>
+              <a href="{% static 'mainapp/images/holiday_house/1/h_house1.3.png' %}" data-lightbox="image-1" style="display: none;">
+                  <img src="{% static 'mainapp/images/holiday_house/1/h_house1.3.png' %}" alt="Additional Image 2">
+              </a>
+            </div>
+
+            <div class="card-body">
+              <div class="card-text">
+                <p>Заїзд: 15:00</p>
+                <p>Виїзд: 12:00</p>
+                <p>Перебування з тваринами: 500 грн/добу</p>
+              </div>
+
+              <!-- accordion -->
+              <div class="accordion accordion-flush pb-2" id="accordionFlush_hhouse5">
+                <div class="accordion-item">
+                  <h4 class="accordion-header" id="flush-headingOne_hhouse5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne_hhouse5" aria-expanded="false" aria-controls="flush-collapseOne_hhouse5">
+                      Спальні
+                    </button>
+                  </h4>
+                  <div id="flush-collapseOne_hhouse5" class="accordion-collapse collapse" aria-labelledby="flush-headingOne_hhouse5" data-bs-parent="#accordionFlush_hhouse5">
+                    <div class="accordion-body">
+                      <p>3 повноцінні окремі спальні</p>
+                      <p>Двоспальні ліжка: 3</p>
+                      <p>Розкладні дивани: 2</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h4 class="accordion-header" id="flush-headingTwo_hhouse5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo_hhouse5" aria-expanded="false" aria-controls="flush-collapseTwo_hhouse5">
+                      Вітальня
+                    </button>
+                  </h4>
+                  <div id="flush-collapseTwo_hhouse5" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo_hhouse5" data-bs-parent="#accordionFlush_hhouse5">
+                    <div class="accordion-body">
+                      <p>Великий зал з каміном на дровах (+ кондиціонери)</p>
+                      <p>Кількість посадочних місць: 8-10 (стандарт)</p>
+                      <p>Додатково: столи та стільці на 20 посадочних місць</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h4 class="accordion-header" id="flush-headingThree_hhouse5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree_hhouse5" aria-expanded="false" aria-controls="flush-collapseThree_hhouse5">
+                      Кухня
+                    </button>
+                  </h4>
+                  <div id="flush-collapseThree_hhouse5" class="accordion-collapse collapse" aria-labelledby="flush-headingThree_hhouse5" data-bs-parent="#accordionFlush_hhouse5">
+                    <div class="accordion-body">
+                      <p>Посуд, прибори</p>
+                      <p>Плита</p>
+                      <p>Холодильник</p>
+                    </div>
+                  </div>
+                </div>
+<!--                <div class="accordion-item">-->
+<!--                  <h2 class="accordion-header" id="flush-headingFour_hhouse5">-->
+<!--                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour_hhouse5" aria-expanded="false" aria-controls="flush-collapseFour_hhouse5">-->
+<!--                      Розваги-->
+<!--                    </button>-->
+<!--                  </h2>-->
+<!--                  <div id="flush-collapseFour_hhouse5" class="accordion-collapse collapse" aria-labelledby="flush-headingFour_hhouse5" data-bs-parent="#accordionFlush_hhouse5">-->
+<!--                    <div class="accordion-body">-->
+<!--                      <p>Великий телевізор з плоским екраном</p>-->
+<!--                      <p>Xbox для ігор та задоволення</p>-->
+<!--                      <p>WiFi (Супутниковий StarLink) + гарно ловить LTE</p>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="accordion-item">-->
+<!--                  <h2 class="accordion-header" id="flush-headingFive_hhouse5">-->
+<!--                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive_hhouse5" aria-expanded="false" aria-controls="flush-collapseFive_hhouse5">-->
+<!--                      На свіжому повітрі-->
+<!--                    </button>-->
+<!--                  </h2>-->
+<!--                  <div id="flush-collapseFive_hhouse5" class="accordion-collapse collapse" aria-labelledby="flush-headingFive_hhouse5" data-bs-parent="#accordionFlush_hhouse5">-->
+<!--                    <div class="accordion-body">-->
+<!--                      <p>Спортивна риболовля (зловив / випустив)</p>-->
+<!--                      <p>Став сильно зариблено (особини до 15 кг)</p>-->
+<!--                      <p>Риба: щука, короп, товстолоб, карась, лин</p>-->
+<!--                      <p>Човни для риболовлі та прогулянок</p>-->
+<!--                      <p>Мангал, шампура, казанок та дрова</p>-->
+<!--                      <p>Сауна на 4-6 людей</p>-->
+<!--                      <p>Безлімітний чан та дрова до нього</p>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="accordion-item">-->
+<!--                  <h2 class="accordion-header" id="flush-headingSix_hhouse5">-->
+<!--                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix_hhouse5" aria-expanded="false" aria-controls="flush-collapseSix_hhouse5">-->
+<!--                      Інше-->
+<!--                    </button>-->
+<!--                  </h2>-->
+<!--                  <div id="flush-collapseSix_hhouse5" class="accordion-collapse collapse" aria-labelledby="flush-headingSix_hhouse5" data-bs-parent="#accordionFlush_hhouse5">-->
+<!--                    <div class="accordion-body">-->
+<!--                      <p>Можливість доставити столи та стільці на 20 посадочних місць</p>-->
+<!--                      <p>Перебування з тваринами оплачується додатково (500 грн/добу)</p>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+              </div>
+              <!-- end accordion -->
+              <!-- buttons group -->
+              <div class="container text-center">
+                <div class="row">
+                  <div class="d-grid gap-2">
+                    <div class="btn-group" role="group" aria-label="Дії для Будинку 5">
+                      <a class="btn btn-outline-primary" href="{% url 'holiday_house_5' %}" role="button">Деталі</a>
+                      <a class="btn btn-outline-primary" href="{% url 'holiday_house_5' %}" role="button">Календар</a>
+                      <a class="btn btn-outline-primary" href="{% url 'booking' %}" role="button">Бронь</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end buttons group -->
+            </div>
+          </div>
+        </div>
+        <!-- end Holiday House 5 -->
+
+        <!-- Holiday House 6 -->
+        <div class="col">
+          <div class="card border-0 shadow">
+            <div>
+              <a href="{% static 'mainapp/images/holiday_house/1/h_house1.1.png' %}" data-lightbox="image-1">
+                <img class="bd-placeholder-img card-img-top" width="100%" height="100%" src="{% static 'mainapp/images/holiday_house/1/h_house1.1.png' %}" alt="Thumbnail">
+
+                <div class="card-img-overlay" style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">
+                  <h3 class="card-title">Будинок 6</h3>
+                  <p class="card-text">
+                    <span>Вмістимість: 2-3 особи</span>
+                  </p>
+                </div>
+              </a>
+              <a href="{% static 'mainapp/images/holiday_house/1/h_house1.2.png' %}" data-lightbox="image-1" style="display: none;">
+                  <img src="{% static 'mainapp/images/holiday_house/1/h_house1.2.png' %}" alt="Additional Image 1">
+              </a>
+              <a href="{% static 'mainapp/images/holiday_house/1/h_house1.3.png' %}" data-lightbox="image-1" style="display: none;">
+                  <img src="{% static 'mainapp/images/holiday_house/1/h_house1.3.png' %}" alt="Additional Image 2">
+              </a>
+            </div>
+
+            <div class="card-body">
+              <div class="card-text">
+                <p>Двоповерховий контейнерний будинок, розрахований від 2 до 3 осіб.</p>
+              </div>
+
+              <!-- accordion -->
+              <div class="accordion accordion-flush pb-2" id="accordionFlush_hhouse6">
+                <div class="accordion-item">
+                  <h4 class="accordion-header" id="flush-headingOne_hhouse6">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne_hhouse6" aria-expanded="false" aria-controls="flush-collapseOne_hhouse6">
+                      1-й поверх
+                    </button>
+                  </h4>
+                  <div id="flush-collapseOne_hhouse6" class="accordion-collapse collapse" aria-labelledby="flush-headingOne_hhouse6" data-bs-parent="#accordionFlush_hhouse6">
+                    <div class="accordion-body">
+                      <p>Кухня з усім необхідним посудом для самостійного приготування їжі.</p>
+                      <p>Мініхолодильник, електрочайник, електроплита, капсульна кавомашина  Nespresso.</p>
+                      <p>Санвузол, стіл, стільці 4 шт. , розкладний полуторний диван.</p>
+                      <p>Телевізор, WiFi.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h4 class="accordion-header" id="flush-headingTwo_hhouse6">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo_hhouse6" aria-expanded="false" aria-controls="flush-collapseTwo_hhouse6">
+                      2-й поверх
+                    </button>
+                  </h4>
+                  <div id="flush-collapseTwo_hhouse6" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo_hhouse6" data-bs-parent="#accordionFlush_hhouse6">
+                    <div class="accordion-body">
+                      <p>Телевізор.</p>
+                      <p>Тераса із джакузі на дровах.</p>
+                    </div>
+                  </div>
+                </div>
+<!--                <div class="accordion-item">-->
+<!--                  <h2 class="accordion-header" id="flush-headingThree_hhouse6">-->
+<!--                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree_hhouse6" aria-expanded="false" aria-controls="flush-collapseThree_hhouse6">-->
+<!--                      Кухня-->
+<!--                    </button>-->
+<!--                  </h2>-->
+<!--                  <div id="flush-collapseThree_hhouse6" class="accordion-collapse collapse" aria-labelledby="flush-headingThree_hhouse6" data-bs-parent="#accordionFlush_hhouse6">-->
+<!--                    <div class="accordion-body">-->
+<!--                      <p>Посуд, прибори</p>-->
+<!--                      <p>Плита</p>-->
+<!--                      <p>Холодильник</p>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="accordion-item">-->
+<!--                  <h2 class="accordion-header" id="flush-headingFour_hhouse6">-->
+<!--                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour_hhouse6" aria-expanded="false" aria-controls="flush-collapseFour_hhouse6">-->
+<!--                      Розваги-->
+<!--                    </button>-->
+<!--                  </h2>-->
+<!--                  <div id="flush-collapseFour_hhouse6" class="accordion-collapse collapse" aria-labelledby="flush-headingFour_hhouse6" data-bs-parent="#accordionFlush_hhouse6">-->
+<!--                    <div class="accordion-body">-->
+<!--                      <p>Великий телевізор з плоским екраном</p>-->
+<!--                      <p>Xbox для ігор та задоволення</p>-->
+<!--                      <p>WiFi (Супутниковий StarLink) + гарно ловить LTE</p>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="accordion-item">-->
+<!--                  <h2 class="accordion-header" id="flush-headingFive_hhouse6">-->
+<!--                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive_hhouse6" aria-expanded="false" aria-controls="flush-collapseFive_hhouse6">-->
+<!--                      На свіжому повітрі-->
+<!--                    </button>-->
+<!--                  </h2>-->
+<!--                  <div id="flush-collapseFive_hhouse6" class="accordion-collapse collapse" aria-labelledby="flush-headingFive_hhouse6" data-bs-parent="#accordionFlush_hhouse6">-->
+<!--                    <div class="accordion-body">-->
+<!--                      <p>Спортивна риболовля (зловив / випустив)</p>-->
+<!--                      <p>Став сильно зариблено (особини до 15 кг)</p>-->
+<!--                      <p>Риба: щука, короп, товстолоб, карась, лин</p>-->
+<!--                      <p>Човни для риболовлі та прогулянок</p>-->
+<!--                      <p>Мангал, шампура, казанок та дрова</p>-->
+<!--                      <p>Сауна на 4-6 людей</p>-->
+<!--                      <p>Безлімітний чан та дрова до нього</p>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="accordion-item">-->
+<!--                  <h2 class="accordion-header" id="flush-headingSix_hhouse6">-->
+<!--                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix_hhouse6" aria-expanded="false" aria-controls="flush-collapseSix_hhouse6">-->
+<!--                      Інше-->
+<!--                    </button>-->
+<!--                  </h2>-->
+<!--                  <div id="flush-collapseSix_hhouse6" class="accordion-collapse collapse" aria-labelledby="flush-headingSix_hhouse6" data-bs-parent="#accordionFlush_hhouse6">-->
+<!--                    <div class="accordion-body">-->
+<!--                      <p>Можливість доставити столи та стільці на 20 посадочних місць</p>-->
+<!--                      <p>Перебування з тваринами оплачується додатково (500 грн/добу)</p>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+              </div>
+              <!-- end accordion -->
+              <!-- buttons group -->
+              <div class="container text-center">
+                <div class="row">
+                  <div class="d-grid gap-2">
+                    <div class="btn-group" role="group" aria-label="Дії для Будинку 6">
+                      <a class="btn btn-outline-primary" href="{% url 'holiday_house_6' %}" role="button">Деталі</a>
+                      <a class="btn btn-outline-primary" href="{% url 'holiday_house_6' %}" role="button">Календар</a>
+                      <a class="btn btn-outline-primary" href="{% url 'booking' %}" role="button">Бронь</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end buttons group -->
+            </div>
+          </div>
+        </div>
+        <!-- end Holiday House 6 -->
+
+        <!-- Holiday House 7 -->
+        <div class="col">
+          <div class="card border-0 shadow">
+            <div>
+              <a href="{% static 'mainapp/images/holiday_house/1/h_house1.1.png' %}" data-lightbox="image-1">
+                <img class="bd-placeholder-img card-img-top" width="100%" height="100%" src="{% static 'mainapp/images/holiday_house/1/h_house1.1.png' %}" alt="Thumbnail">
+
+                <div class="card-img-overlay" style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">
+                  <h3 class="card-title">Будинок 7</h3>
+                  <p class="card-text">
+                    <span>Вмістимість: 2-3 особи</span>
+                  </p>
+                </div>
+              </a>
+              <a href="{% static 'mainapp/images/holiday_house/1/h_house1.2.png' %}" data-lightbox="image-1" style="display: none;">
+                  <img src="{% static 'mainapp/images/holiday_house/1/h_house1.2.png' %}" alt="Additional Image 1">
+              </a>
+              <a href="{% static 'mainapp/images/holiday_house/1/h_house1.3.png' %}" data-lightbox="image-1" style="display: none;">
+                  <img src="{% static 'mainapp/images/holiday_house/1/h_house1.3.png' %}" alt="Additional Image 2">
+              </a>
+            </div>
+
+            <div class="card-body">
+              <div class="card-text">
+                <p>Двоповерховий контейнерний будинок, розрахований від 2 до 3 осіб.</p>
+              </div>
+
+              <!-- accordion -->
+              <div class="accordion accordion-flush pb-2" id="accordionFlush_hhouse7">
+                <div class="accordion-item">
+                  <h4 class="accordion-header" id="flush-headingOne_hhouse7">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne_hhouse7" aria-expanded="false" aria-controls="flush-collapseOne_hhouse7">
+                      1-й поверх
+                    </button>
+                  </h4>
+                  <div id="flush-collapseOne_hhouse7" class="accordion-collapse collapse" aria-labelledby="flush-headingOne_hhouse7" data-bs-parent="#accordionFlush_hhouse7">
+                    <div class="accordion-body">
+                      <p>Кухня з усім необхідним посудом для самостійного приготування їжі.</p>
+                      <p>Мініхолодильник, електрочайник, електроплита, капсульна кавомашина  Nespresso.</p>
+                      <p>Санвузол, стіл, стільці 4 шт. , розкладний полуторний диван.</p>
+                      <p>Телевізор, WiFi.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h4 class="accordion-header" id="flush-headingTwo_hhouse7">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo_hhouse7" aria-expanded="false" aria-controls="flush-collapseTwo_hhouse7">
+                      2-й поверх
+                    </button>
+                  </h4>
+                  <div id="flush-collapseTwo_hhouse7" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo_hhouse7" data-bs-parent="#accordionFlush_hhouse7">
+                    <div class="accordion-body">
+                      <p>Телевізор.</p>
+                      <p>Тераса із джакузі на дровах.</p>
+                    </div>
+                  </div>
+                </div>
+<!--                <div class="accordion-item">-->
+<!--                  <h2 class="accordion-header" id="flush-headingThree_hhouse7">-->
+<!--                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree_hhouse7" aria-expanded="false" aria-controls="flush-collapseThree_hhouse7">-->
+<!--                      Кухня-->
+<!--                    </button>-->
+<!--                  </h2>-->
+<!--                  <div id="flush-collapseThree_hhouse7" class="accordion-collapse collapse" aria-labelledby="flush-headingThree_hhouse7" data-bs-parent="#accordionFlush_hhouse7">-->
+<!--                    <div class="accordion-body">-->
+<!--                      <p>Посуд, прибори</p>-->
+<!--                      <p>Плита</p>-->
+<!--                      <p>Холодильник</p>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="accordion-item">-->
+<!--                  <h2 class="accordion-header" id="flush-headingFour_hhouse7">-->
+<!--                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour_hhouse7" aria-expanded="false" aria-controls="flush-collapseFour_hhouse7">-->
+<!--                      Розваги-->
+<!--                    </button>-->
+<!--                  </h2>-->
+<!--                  <div id="flush-collapseFour_hhouse7" class="accordion-collapse collapse" aria-labelledby="flush-headingFour_hhouse7" data-bs-parent="#accordionFlush_hhouse7">-->
+<!--                    <div class="accordion-body">-->
+<!--                      <p>Великий телевізор з плоским екраном</p>-->
+<!--                      <p>Xbox для ігор та задоволення</p>-->
+<!--                      <p>WiFi (Супутниковий StarLink) + гарно ловить LTE</p>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="accordion-item">-->
+<!--                  <h2 class="accordion-header" id="flush-headingFive_hhouse7">-->
+<!--                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive_hhouse7" aria-expanded="false" aria-controls="flush-collapseFive_hhouse7">-->
+<!--                      На свіжому повітрі-->
+<!--                    </button>-->
+<!--                  </h2>-->
+<!--                  <div id="flush-collapseFive_hhouse7" class="accordion-collapse collapse" aria-labelledby="flush-headingFive_hhouse7" data-bs-parent="#accordionFlush_hhouse7">-->
+<!--                    <div class="accordion-body">-->
+<!--                      <p>Спортивна риболовля (зловив / випустив)</p>-->
+<!--                      <p>Став сильно зариблено (особини до 15 кг)</p>-->
+<!--                      <p>Риба: щука, короп, товстолоб, карась, лин</p>-->
+<!--                      <p>Човни для риболовлі та прогулянок</p>-->
+<!--                      <p>Мангал, шампура, казанок та дрова</p>-->
+<!--                      <p>Сауна на 4-6 людей</p>-->
+<!--                      <p>Безлімітний чан та дрова до нього</p>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="accordion-item">-->
+<!--                  <h2 class="accordion-header" id="flush-headingSix_hhouse7">-->
+<!--                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix_hhouse7" aria-expanded="false" aria-controls="flush-collapseSix_hhouse7">-->
+<!--                      Інше-->
+<!--                    </button>-->
+<!--                  </h2>-->
+<!--                  <div id="flush-collapseSix_hhouse7" class="accordion-collapse collapse" aria-labelledby="flush-headingSix_hhouse7" data-bs-parent="#accordionFlush_hhouse7">-->
+<!--                    <div class="accordion-body">-->
+<!--                      <p>Можливість доставити столи та стільці на 20 посадочних місць</p>-->
+<!--                      <p>Перебування з тваринами оплачується додатково (500 грн/добу)</p>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+              </div>
+              <!-- end accordion -->
+              <!-- buttons group -->
+              <div class="container text-center">
+                <div class="row">
+                  <div class="d-grid gap-2">
+                    <div class="btn-group" role="group" aria-label="Дії для Будинку 7">
+                      <a class="btn btn-outline-primary" href="{% url 'holiday_house_7' %}" role="button">Деталі</a>
+                      <a class="btn btn-outline-primary" href="{% url 'holiday_house_7' %}" role="button">Календар</a>
+                      <a class="btn btn-outline-primary" href="{% url 'booking' %}" role="button">Бронь</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end buttons group -->
+            </div>
+          </div>
+        </div>
+        <!-- end Holiday House 7 -->
+
+        <!-- Additional Services -->
+        <div class="col">
+          <div class="card border-0 shadow">
+            <div>
+              <a href="{% static 'mainapp/images/holiday_house/1/h_house1.1.png' %}" data-lightbox="image-1">
+                <img class="bd-placeholder-img card-img-top" width="100%" height="100%" src="{% static 'mainapp/images/holiday_house/1/h_house1.1.png' %}" alt="Thumbnail">
+
+                <div class="card-img-overlay" style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">
+                  <h3 class="card-title">Додаткові послуги</h3>
+                  <p class="card-text">
+                    <span>Зміст</span>
+
+                  </p>
+                </div>
+              </a>
+              <a href="{% static 'mainapp/images/holiday_house/1/h_house1.2.png' %}" data-lightbox="image-1" style="display: none;">
+                  <img src="{% static 'mainapp/images/holiday_house/1/h_house1.2.png' %}" alt="Additional Image 1">
+              </a>
+              <a href="{% static 'mainapp/images/holiday_house/1/h_house1.3.png' %}" data-lightbox="image-1" style="display: none;">
+                  <img src="{% static 'mainapp/images/holiday_house/1/h_house1.3.png' %}" alt="Additional Image 2">
+              </a>
+            </div>
+
+            <div class="card-body">
+              <div class="card-text">
+                <p>Замовляйте послуги завчасно</p>
+                <p></p>
+                <p></p>
+              </div>
+
+              <!-- accordion -->
+              <div class="accordion accordion-flush pb-2" id="accordionFlush_AddServices">
+                <div class="accordion-item">
+                  <h4 class="accordion-header" id="flush-headingOne_AddServices">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne_AddServices" aria-expanded="false" aria-controls="flush-collapseOne_AddServices">
+                      Чан на травах
+                    </button>
+                  </h4>
+                  <div id="flush-collapseOne_AddServices" class="accordion-collapse collapse" aria-labelledby="flush-headingOne_AddServices" data-bs-parent="#accordionFlush_AddServices">
+                    <div class="accordion-body">
+                      <p>3 повноцінні окремі спальні</p>
+                      <p>Двоспальні ліжка: 3</p>
+                      <p>Розкладні дивани: 2</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h4 class="accordion-header" id="flush-headingTwo_AddServices">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo_AddServices" aria-expanded="false" aria-controls="flush-collapseTwo_AddServices">
+                      Джакузі
+                    </button>
+                  </h4>
+                  <div id="flush-collapseTwo_AddServices" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo_AddServices" data-bs-parent="#accordionFlush_AddServices">
+                    <div class="accordion-body">
+                      <p>Великий зал з каміном на дровах (+ кондиціонери)</p>
+                      <p>Кількість посадочних місць: 8-10 (стандарт)</p>
+                      <p>Додатково: столи та стільці на 20 посадочних місць</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h4 class="accordion-header" id="flush-headingThree_AddServices">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree_AddServices" aria-expanded="false" aria-controls="flush-collapseThree_AddServices">
+                      Шатро
+                    </button>
+                  </h4>
+                  <div id="flush-collapseThree_AddServices" class="accordion-collapse collapse" aria-labelledby="flush-headingThree_AddServices" data-bs-parent="#accordionFlush_AddServices">
+                    <div class="accordion-body">
+                      <p>Посуд, прибори</p>
+                      <p>Плита</p>
+                      <p>Холодильник</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h4 class="accordion-header" id="flush-headingFour_AddServices">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour_AddServices" aria-expanded="false" aria-controls="flush-collapseFour_AddServices">
+                      Додаткове спальне місце
+                    </button>
+                  </h4>
+                  <div id="flush-collapseFour_AddServices" class="accordion-collapse collapse" aria-labelledby="flush-headingFour_AddServices" data-bs-parent="#accordionFlush_AddServices">
+                    <div class="accordion-body">
+                      <p>Великий телевізор з плоским екраном</p>
+                      <p>Xbox для ігор та задоволення</p>
+                      <p>WiFi (Супутниковий StarLink) + гарно ловить LTE</p>
+                    </div>
+                  </div>
+                </div>
+<!--                <div class="accordion-item">-->
+<!--                  <h2 class="accordion-header" id="flush-headingFive_AddServices">-->
+<!--                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive_AddServices" aria-expanded="false" aria-controls="flush-collapseFive_AddServices">-->
+<!--                      На свіжому повітрі-->
+<!--                    </button>-->
+<!--                  </h2>-->
+<!--                  <div id="flush-collapseFive_AddServices" class="accordion-collapse collapse" aria-labelledby="flush-headingFive_AddServices" data-bs-parent="#accordionFlush_AddServices">-->
+<!--                    <div class="accordion-body">-->
+<!--                      <p>Спортивна риболовля (зловив / випустив)</p>-->
+<!--                      <p>Став сильно зариблено (особини до 15 кг)</p>-->
+<!--                      <p>Риба: щука, короп, товстолоб, карась, лин</p>-->
+<!--                      <p>Човни для риболовлі та прогулянок</p>-->
+<!--                      <p>Мангал, шампура, казанок та дрова</p>-->
+<!--                      <p>Сауна на 4-6 людей</p>-->
+<!--                      <p>Безлімітний чан та дрова до нього</p>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="accordion-item">-->
+<!--                  <h2 class="accordion-header" id="flush-headingSix_AddServices">-->
+<!--                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix_AddServices" aria-expanded="false" aria-controls="flush-collapseSix_AddServices">-->
+<!--                      Інше-->
+<!--                    </button>-->
+<!--                  </h2>-->
+<!--                  <div id="flush-collapseSix_AddServices" class="accordion-collapse collapse" aria-labelledby="flush-headingSix_AddServices" data-bs-parent="#accordionFlush_AddServices">-->
+<!--                    <div class="accordion-body">-->
+<!--                      <p>Можливість доставити столи та стільці на 20 посадочних місць</p>-->
+<!--                      <p>Перебування з тваринами оплачується додатково (500 грн/добу)</p>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+              </div>
+              <!-- end accordion -->
+              <!-- buttons group -->
+              <div class="container text-center">
+                <div class="row">
+                  <div class="d-grid gap-2">
+                    <div class="btn-group" role="group" aria-label="Дії для Додаткових послуг">
+                      <a class="btn btn-outline-primary" href="{% url 'holiday_house_1' %}" role="button">Деталі</a>
+<!--                      <a class="btn btn-outline-primary" href="{% url 'holiday_house_1' %}" role="button">Календар</a>-->
+<!--                      <a class="btn btn-outline-primary" href="{% url 'booking' %}" role="button">Бронь</a>-->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end buttons group -->
+            </div>
+          </div>
+        </div>
+        <!-- end Additional Services -->
+
+      </div>
+
+  </div>
+</div>
+<!-- end Holiday Houses -->
+
+<!--contact us-->
+<section id="contact" class="card border-0 shadow m-3 p-3">
+    <div class="container">
+        <div class="row text-center">
+          <div class="col-sm-6">
+            <div class="contact-detail-box">
+              <i class="fa fa-map-marker fa-3x text-colored"></i>
+              <h3>Наше розташування</h3>
+              <address>
+                вул. Зарічна, 38, с. Головчинці,<br />
+                Хмельницький район, Хмельницька область,<br />
+                31533<br />
+              </address>
+            </div>
+          </div><!-- end col -->
+
+          <div class="col-sm-6">
+            <div class="contact-detail-box">
+              <i class="far fa-envelope text-colored fa-3x"></i>
+              <h3>Зв'язок з нами</h3>
+                <a href="tel:+380674073555" id="phone_contact_us"><i class="bi bi-phone-fill"></i>&nbsp;+ 38 067 407 3 555</a>&nbsp;&nbsp;
+                <a href="mailto:fermanew.com@gmail.com" id="mail_contact_us"><i class="bi bi-envelope-fill"></i>&nbsp;&nbsp;fermanew.com@gmail.com</a><br />
+            </div>
+          </div><!-- end col -->
+
+        </div>
+        <!-- end row -->
+
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="contact-map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2023.6422531744827!2d27.466242945686712!3d49.42851935914747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472d8b6ebea6fdd7%3A0xae2b82c69bd408a5!2z0KTQtdGA0LzQsA!5e0!3m2!1sru!2sua!4v1719325909943!5m2!1sru!2sua" width="100%" height="360" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="alert alert-success text-center mt-2" role="alert">
+              Просимо залишити <a href="https://www.google.com/travel/search?q=%D0%A4%D0%B5%D1%80%D0%BC%D0%B0&g2lb=4814050%2C4874190%2C4893075%2C4965990%2C10210221%2C72277293%2C72302247%2C72317059%2C72406588%2C72414906%2C72421566%2C72462234%2C72470899%2C72471280%2C72472051%2C72473841%2C72481459%2C72485658%2C72486593%2C72494250%2C72499705%2C72513513%2C72536387%2C72549171%2C72569093%2C72570850%2C72602734%2C72605013%2C72606237%2C72616120%2C72619927%2C72620306%2C72620956%2C72624691%2C72634630%2C72648289%2C72652502%2C72658768&hl=ru-UA&gl=ua&cs=1&ssta=1&ts=CAEaKwopEicyJTB4NDcyZDhiNmViZWE2ZmRkNzoweGFlMmI4MmM2OWJkNDA4YTU&qs=CAEyFENnc0lwWkhRM3VuWTRKV3VBUkFCOAI&ap=ugEHcmV2aWV3cw&ictx=1&ved=0CAAQ5JsGahcKEwig4NvG8JSHAxUAAAAAHQAAAAAQBQ" class="alert-link">Ваші відгуки у Google Maps</a>
+            </div>
+          </div><!-- end col -->
+
+          <!-- Feedback form -->
+          <div class="col-sm-6">
+            <div class="alert alert-primary text-center" role="alert">
+              Ми з радістю розглянемо Ваші відгуки та пропозиції. Напишіть нам
+            </div>
+<!--            <div class="text-center">-->
+<!--              Ми з радістю розглянемо Ваші відгуки та пропозиції. Напишіть нам-->
+<!--            </div>-->
+            <form role="form" name="ajax-form" id="ajax-form" method="post" class="form-main" action="{% url 'index' %}">
+
+              {% csrf_token %}
+              <div class="form-group pb-1">
+                <label for="name2">Імʼя</label>
+                <input class="form-control" id="name2" name="name" type="text" placeholder="введіть Ваше імʼя">
+                <div class="error" id="err-name" style="display: none;">Будь ласка, введіть Ваше імʼя</div>
+              </div> <!-- /Form-name -->
+
+              <div class="form-group py-1">
+                <label for="email2">Email</label>
+                <input class="form-control" id="email2" name="email" type="text" placeholder="email">
+                <div class="error" id="err-emailvld" style="display: none;">E-mail не є дійсним форматом</div>
+              </div> <!-- /Form-email -->
+
+              <div class="form-group py-1">
+                <label for="message2">Повідомлення</label>
+                <textarea class="form-control" id="message2" name="message" rows="5" placeholder="введіть повідомлення"></textarea>
+                <div class="error" id="err-message" style="display: none;">Будь-ласка, введіть повідомлення</div>
+              </div> <!-- /col -->
+
+              <div class="row">
+                <div class="d-grid gap-2">
+                  <input class="btn btn-outline-primary btn-shadow mt-2" type="submit" value="Надіслати">
+                </div>
+              </div> <!-- /Form-message -->
+
+            </form> <!-- /form -->
+          </div>
+          <!-- Feedback form -->
+
+        </div> <!-- end row -->
+
+      </div>
+</section>
+<!-- end contact us -->
+
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      lightbox.option({
+        maxWidth: 700,
+        'resizeDuration': 200,
+        'wrapAround': true,
+      });
+    });
+  </script>
+{% endblock %}
+
+

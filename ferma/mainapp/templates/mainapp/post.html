@@ -1,0 +1,52 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+    <div class="container my-5">
+        <div class="text-center" style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">
+            <h1 class="fs-1" style="letter-spacing: 0.7em; margin-right: -0.6em;">FERMA NEW</h1>
+            <h2 class="fs-4 mt-3" style="letter-spacing:0.32em;">відпочинковий комплекс</h2>
+        </div>
+    </div>
+
+
+        <div id="container_post" class="container-md pt-5">
+            <div class="row justify-content-md-center">
+                <div class="col-lg-8">
+                    <!-- зображення -->
+                    {% if post.photo %}
+                        <p><img class="w-100 pt-5" src="{{ post.photo.url }}"></p>
+                    {% endif %}
+
+                    <!--заголовок та текст допису -->
+                    {% autoescape off %}  <!-- екранування, для того щоб спрацювували теги при введенні особливого тексту типу <H1>,прописом, жирного тексту і т.п.-->
+                        <h2>{{post.title}}</h2>
+                        <p>{{post.content|linebreaks}}</p> <!-- linebreaks - розрив рядків-->
+                    {% endautoescape %}
+
+                    <!--завантаження додатків-->
+                    {% if post.document %}        <!-- 'p' changing to 'post' -->
+                        <p><a href="{{post.document.url}}">Завантажити додаток</a></p> <!-- 'p' changing to 'post' -->
+                    {% endif %}
+
+                    <!-- категорія і дата створення-->
+                    <div class="article-panel">
+                        <!--категорія <p class="first">Категорія: {{post.cat}}</p>-->
+                        <p class="last">
+<!--                            <i class="bi bi-calendar4-event" style="color: #4b7604"></i>-->
+                            <i class="bi bi-calendar4-event"></i>
+<!--                            {{post.time_update|date:"d-m-Y H:i"}}-->
+                                {{post.time_update|date:"d-m-Y"}}
+                            &emsp;
+                            <i class="bi bi-clock" id="clock_icon"></i>
+<!--                            <i class="bi bi-clock" style="color: #4b7604" id="clock_icon"></i>-->
+                            {{post.time_update|date:"H:i"}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+{% endblock %}
