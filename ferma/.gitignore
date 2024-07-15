@@ -1,0 +1,15 @@
+# Ignore the .env file
+.env
+
+# Ignore database files
+db.sqlite3
+
+# Ignore Python compiled files
+__pycache__/
+*.pyc
+
+# Ignore virtual environment directory
+venv/
+
+# Ignore .idea directory created by PyCharm
+.idea/
