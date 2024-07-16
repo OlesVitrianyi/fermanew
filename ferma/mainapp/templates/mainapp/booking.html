@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block content %}
-
+<main>
     <div class="container my-5">
         <div class="text-center" style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">
             <h1 class="fs-1" style="letter-spacing: 0.7em; margin-right: -0.6em;">FERMA NEW</h1>
@@ -19,8 +19,8 @@
                     <h2 class="text-center mt-3">БРОНЮВАННЯ БУДИНКІВ</h2>
                     <div class="card border-0 shadow m-3 p-3">
                     <!--<div class="shadow p-4 mb-5 bg-body bg-body rounded text-black  m-5 ">-->
-
-                        <form method="post" action="{% url 'booking' %}" class="me-2 ms-2" required>
+<!--                        <form method="post" action="{% url 'booking' %}" class="me-2 ms-2" required>-->
+                        <form method="post" action="{% url 'booking' %}" class="me-2 ms-2">
 
                             {% csrf_token %}
 
@@ -62,7 +62,7 @@
             </div>
         </div>
     </div>
-
+</main>
 {% endblock %}
 
 

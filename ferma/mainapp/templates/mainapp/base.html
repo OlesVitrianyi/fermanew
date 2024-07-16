@@ -92,16 +92,15 @@
             </div>
         </nav>
 
-<!--        &lt;!&ndash; Temporary message block &ndash;&gt;-->
-<!--        <div class="alert alert-warning text-center" role="alert">-->
-<!--            <i class="bi bi-exclamation-circle fs-2"></i>&nbsp;-->
-<!--            <span class="fs-4">-->
-<!--                Cторінка перебуває у стані розробки. <br />-->
-<!--                Просимо не здійснювати дій, повʼязаних із реєстрацією та бронюванням-->
-<!--            </span>-->
-<!--        </div>-->
-<!--        &lt;!&ndash; end Temporary message block &ndash;&gt;-->
-
+        <!-- Temporary message block -->
+        <div class="alert alert-warning text-center" role="alert" style="margin-bottom: 0;">
+            <i class="bi bi-exclamation-circle fs-2"></i>&nbsp;
+            <span class="fs-4">
+                Cторінка перебуває у стані розробки. <br />
+                Просимо не здійснювати дій, повʼязаних із реєстрацією та бронюванням
+            </span>
+        </div>
+        <!-- end Temporary message block -->
 
         <!--Messages Start-->
         {% if messages %}
@@ -113,6 +112,7 @@
         {% endfor %}
         {% endif %}
         <!--Messages End-->
+
     </header>
 
     {% block screensaver %}
@@ -127,69 +127,68 @@
     {% block h_house  %}
     {% endblock %}
 
-<div class="container">
+    <footer>
+        <div class="container">
 
-  <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
 
-    <div class="col mb-3">
-<!--      <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">-->
-<!--        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>-->
-<!--      </a>-->
-
-                <a class="navbar-brand" href="{% url 'index' %}" style="color: red">
-                    FERMA&nbsp;
+            <div class="col mb-3">
+                <a class="navbar-brand" href="{% url 'index' %}" style="color: rgb(190, 55, 69);">
+                    <b>FERMA</b>&nbsp;
                     <span class="badge text-bg-danger">New</span>
                 </a>
-<!--      <p class="text-muted">відпочинковий <br />комплекс</p>-->
-    </div>
+        <!--      <p class="text-muted">відпочинковий <br />комплекс</p>-->
+            </div>
 
-    <div class="col mb-3">
+            <div class="col mb-3">
+            </div>
 
-    </div>
+            <div class="col mb-3">
+              <h5>Гостьові будинки</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="{% url 'holiday_house_1' %}" class="nav-link p-0 text-muted">Будинок 1</a></li>
+                <li class="nav-item mb-2"><a href="{% url 'holiday_house_2' %}" class="nav-link p-0 text-muted">Будинок 2</a></li>
+                <li class="nav-item mb-2"><a href="{% url 'holiday_house_3' %}" class="nav-link p-0 text-muted">Будинок 3</a></li>
+                <li class="nav-item mb-2"><a href="{% url 'holiday_house_4' %}" class="nav-link p-0 text-muted">Будинок 4</a></li>
+                <li class="nav-item mb-2"><a href="{% url 'holiday_house_5' %}" class="nav-link p-0 text-muted">Будинок 5</a></li>
+                <li class="nav-item mb-2"><a href="{% url 'holiday_house_6' %}" class="nav-link p-0 text-muted">Будинок 6</a></li>
+                <li class="nav-item mb-2"><a href="{% url 'holiday_house_7' %}" class="nav-link p-0 text-muted">Будинок 7</a></li>
+              </ul>
+            </div>
 
-    <div class="col mb-3">
-      <h5>Гостьові будинки</h5>
-      <ul class="nav flex-column">
-        <li class="nav-item mb-2"><a href="{% url 'holiday_house_1' %}" class="nav-link p-0 text-muted">Будинок 1</a></li>
-        <li class="nav-item mb-2"><a href="{% url 'holiday_house_2' %}" class="nav-link p-0 text-muted">Будинок 2</a></li>
-        <li class="nav-item mb-2"><a href="{% url 'holiday_house_3' %}" class="nav-link p-0 text-muted">Будинок 3</a></li>
-        <li class="nav-item mb-2"><a href="{% url 'holiday_house_4' %}" class="nav-link p-0 text-muted">Будинок 4</a></li>
-        <li class="nav-item mb-2"><a href="{% url 'holiday_house_5' %}" class="nav-link p-0 text-muted">Будинок 5</a></li>
-        <li class="nav-item mb-2"><a href="{% url 'holiday_house_6' %}" class="nav-link p-0 text-muted">Будинок 6</a></li>
-        <li class="nav-item mb-2"><a href="{% url 'holiday_house_7' %}" class="nav-link p-0 text-muted">Будинок 7</a></li>
-      </ul>
-    </div>
+            <div class="col mb-3">
+              <h5>Додаткові послуги</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Чан на травах</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Джакузі</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Шатро</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Додаткове спальне місце</a></li>
+              </ul>
+            </div>
 
-    <div class="col mb-3">
-      <h5>Додаткові послуги</h5>
-      <ul class="nav flex-column">
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Чан на травах</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Джакузі</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Шатро</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Додаткове спальне місце</a></li>
-      </ul>
-    </div>
+            <div class="col mb-3">
+              <h5>Посилання</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="{% url 'index' %}" class="nav-link p-0 text-muted">Головна сторінка</a></li>
+                <li class="nav-item mb-2"><a href="{% url 'about_us' %}" class="nav-link p-0 text-muted">Про нас</a></li>
+                <li class="nav-item mb-2"><a href="{% url 'booking' %}" class="nav-link p-0 text-muted">Бронювання</a></li>
+                <li class="nav-item mb-2"><a href="{% url 'contact_us' %}" class="nav-link p-0 text-muted">Звʼязатися з нами</a></li>
+                <li class="nav-item mb-2"><a href="tel: +380967555757" class="nav-link p-0 text-muted">Тел: +38 096 755 57 57</a></li>
+                <li class="nav-item mb-2"><a href="{% url 'privacy_policy' %}" class="nav-link p-0 text-muted">Політика конфіденційності</a></li>
+              </ul>
+            </div>
 
-    <div class="col mb-3">
-      <h5>Посилання</h5>
-      <ul class="nav flex-column">
-        <li class="nav-item mb-2"><a href="{% url 'index' %}" class="nav-link p-0 text-muted">Головна сторінка</a></li>
-        <li class="nav-item mb-2"><a href="{% url 'about_us' %}" class="nav-link p-0 text-muted">Про нас</a></li>
-        <li class="nav-item mb-2"><a href="{% url 'booking' %}" class="nav-link p-0 text-muted">Бронювання</a></li>
-        <li class="nav-item mb-2"><a href="{% url 'contact_us' %}" class="nav-link p-0 text-muted">Звʼязатися з нами</a></li>
-        <li class="nav-item mb-2"><a href="tel: +380967555757" class="nav-link p-0 text-muted">Тел: +38 096 755 57 57</a></li>
-        <li class="nav-item mb-2"><a href="{% url 'privacy_policy' %}" class="nav-link p-0 text-muted">Політика конфіденційності</a></li>
-      </ul>
-    </div>
+          </div>
 
-  </footer>
-    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-      <p>&#9400; Відпочинковий комплекс «ФЕРМА», 2022-{% current_year %}</p>
-      <ul class="list-unstyled d-flex">
-          <a href="https://www.instagram.com/ferma.new/" id=""><i class="bi bi-instagram mx-2"></i></a>
-      </ul>
-    </div>
-</div>
+          <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+            <p>&#9400; Відпочинковий комплекс «ФЕРМА», 2022-{% current_year %}</p>
+            <ul class="list-unstyled d-flex">
+                <a href="https://www.instagram.com/ferma.new/" id=""><i class="bi bi-instagram mx-2"></i></a>
+            </ul>
+          </div>
+        </div>
+    </footer>
+
 
       <!--підключення boootstrap стилів, вимога вкінці, перед закриттям /body (раніще розміщувалося одразу після body зверху) -->
 

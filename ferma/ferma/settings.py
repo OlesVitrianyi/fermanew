@@ -11,11 +11,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 import os
-import ssl
-import certifi
-from smtplib import SMTP
 from pathlib import Path
-
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +22,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-+%@4m*x8-ang$6^!v68+=#x&yy^h^bd$-ep^yj#bzx5-^g0$1g'
+# SECRET_KEY = 'django-insecure-+%@4m*x8-ang$6^!v68+=#x&yy^h^bd$-ep^yj#bzx5-^g0$1g'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -113,7 +111,8 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'uk'
 
-TIME_ZONE = 'UTC'
+# TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Kiev'
 
 USE_I18N = True
 

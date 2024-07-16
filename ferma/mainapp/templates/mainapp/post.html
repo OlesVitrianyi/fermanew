@@ -3,7 +3,7 @@
 
 
 {% block content %}
-
+<main>
     <div class="container my-5">
         <div class="text-center" style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">
             <h1 class="fs-1" style="letter-spacing: 0.7em; margin-right: -0.6em;">FERMA NEW</h1>
@@ -27,9 +27,13 @@
                     {% endautoescape %}
 
                     <!--завантаження додатків-->
-                    {% if post.document %}        <!-- 'p' changing to 'post' -->
-                        <p><a href="{{post.document.url}}">Завантажити додаток</a></p> <!-- 'p' changing to 'post' -->
-                    {% endif %}
+<!--                    {% if post.document %}        &lt;!&ndash; 'p' changing to 'post' &ndash;&gt;-->
+<!--                        <p><a href="{{post.document.url}}">Завантажити додаток</a></p> &lt;!&ndash; 'p' changing to 'post' &ndash;&gt;-->
+<!--                    {% endif %}-->
+
+                    <div class="btn_download">
+                        <a class="btn btn-outline-success btn-sm mb-1" href="{{post.document.url}}" role="button" download="">Завантажити додаток</a>
+                    </div>
 
                     <!-- категорія і дата створення-->
                     <div class="article-panel">
@@ -48,5 +52,5 @@
                 </div>
             </div>
         </div>
-
+</main>
 {% endblock %}

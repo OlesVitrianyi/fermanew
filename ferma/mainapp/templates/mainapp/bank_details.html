@@ -4,64 +4,65 @@
 
 {% block content %}
 
-            <div class="container my-5">
-                <div class="text-center" style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">
-                    <h1 class="fs-1" style="letter-spacing: 0.7em; margin-right: -0.6em;">FERMA NEW</h1>
-                    <h2 class="fs-4 mt-3" style="letter-spacing:0.32em;">відпочинковий комплекс</h2>
-                </div>
-            </div>
-
-<div id="" class="container-md pt-5">
-    <div class="row justify-content-md-center">
-        <div class="col-lg-8">
-
-                <div id="bank_account">
-                    <h2 class="text-center fs-3">Реквізити банківського рахунку</h2>
-                    <br />
-                    <div class="alert alert-primary" role="alert">
-                      У призначенні платежу просимо вказати номер та дату заброньованого будинку.
-                        <i>Наприклад: "Будинок 3. 23.06.2024".</i>
-                    Адміністрація повинна переконатися, що платіж надійшов саме від Вас
-                    </div>
-                    <div class="alert alert-warning" role="alert">
-                        Ви також можете повідомити про внесення авансу в інший зручний для Вас спосіб:
-                        по телефону, через viber, електронною поштою (копію, номер або скрін квитанції)
-                    </div>
-
-                    <table class="table table-borderless table-striped table-hover table-responsive">
-                      <tbody>
-                        <tr>
-                          <td><b>ОТРИМУВАЧ</b></td>
-                          <td> (зразок)КРЕДИТНА СПІЛКА "СЕЙФТІ ДЕПОЗІТ"</td>
-                        </tr>
-                        <tr>
-                          <td><b>ЄДРПОУ спілки</b></td>
-                          <td>(зразок)40434582</td>
-                        </tr>
-                        <tr>
-                          <td><b>БАНК ОТРИМУВАЧ</b></td>
-                          <td>(зразок)ФХМЕЛЬНИЦЬКЕ ОБЛАС УПРАТОЩАД М.ХМЕЛЬН.</td>
-                        </tr>
-                        <tr>
-                          <td><b>МФО банку</b></td>
-                          <td>(зразок)315784</td>
-                        </tr>
-
-                        <tr>
-                          <td><b>РАХУНОК IBAN</b></td>
-                            <td>
-                                <span id="iban">(зразок) UA263157840000026505300812781(UAH)</span>
-                                <button class="btn btn-outline-success btn-sm" onclick="copyIBAN()">Копіювати</button>
-                            </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                </div>
-
+<main>
+    <div class="container my-5">
+        <div class="text-center" style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">
+            <h1 class="fs-1" style="letter-spacing: 0.7em; margin-right: -0.6em;">FERMA NEW</h1>
+            <h2 class="fs-4 mt-3" style="letter-spacing:0.32em;">відпочинковий комплекс</h2>
         </div>
     </div>
-</div>
 
+    <div class="container-md pt-5">
+        <div class="row justify-content-md-center">
+            <div class="col-lg-8">
+
+                    <div id="bank_account">
+                        <h2 class="text-center fs-3">Реквізити банківського рахунку</h2>
+                        <br />
+                        <div class="alert alert-primary" role="alert">
+                          У призначенні платежу просимо вказати номер та дату заброньованого будинку.
+                            <i>Наприклад: "Будинок 3. 23.06.2024".</i>
+                        Адміністрація повинна переконатися, що платіж надійшов саме від Вас
+                        </div>
+                        <div class="alert alert-warning" role="alert">
+                            Ви також можете повідомити про внесення авансу в інший зручний для Вас спосіб:
+                            по телефону, через viber, електронною поштою (копію, номер або скрін квитанції)
+                        </div>
+
+                        <table class="table table-borderless table-striped table-hover table-responsive">
+                          <tbody>
+                            <tr>
+                              <td><b>ОТРИМУВАЧ</b></td>
+                              <td> (зразок)КРЕДИТНА СПІЛКА "СЕЙФТІ ДЕПОЗІТ"</td>
+                            </tr>
+                            <tr>
+                              <td><b>ЄДРПОУ спілки</b></td>
+                              <td>(зразок)40434582</td>
+                            </tr>
+                            <tr>
+                              <td><b>БАНК ОТРИМУВАЧ</b></td>
+                              <td>(зразок)ФХМЕЛЬНИЦЬКЕ ОБЛАС УПРАТОЩАД М.ХМЕЛЬН.</td>
+                            </tr>
+                            <tr>
+                              <td><b>МФО банку</b></td>
+                              <td>(зразок)315784</td>
+                            </tr>
+
+                            <tr>
+                              <td><b>РАХУНОК IBAN</b></td>
+                                <td>
+                                    <span id="iban">(зразок) UA263157840000026505300812781(UAH)</span>
+                                    <button class="btn btn-outline-success btn-sm" onclick="copyIBAN()">Копіювати</button>
+                                </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+</main>
 
 <script>
 function copyIBAN() {

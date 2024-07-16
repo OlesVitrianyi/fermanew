@@ -16,29 +16,31 @@
     <link rel="stylesheet" type="text/css" href="{% static 'mainapp/css/styles.css' %}">
 </head>
 <body>
-            <div class="container my-5">
-                <div class="text-center" style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">
-                    <h1 class="fs-1" style="letter-spacing: 0.7em; margin-right: -0.6em;">FERMA NEW</h1>
-                    <h2 class="fs-4 mt-3" style="letter-spacing:0.32em;">відпочинковий комплекс</h2>
-                </div>
-            </div>
-
-    <div class="container-md pt-5 charter">
-        <div class="row justify-content-md-center">
-            <div class="col-lg-6" style="text-align: center;">
-                <h2 class="fs-1">Помилка 404</h2>
-                <br/>
-                <p class="fs-3"><b>Такої сторінки не знайдено</b></p>
-                <br/>
-                <div class="fs-6">
-                    <p><b>Такої сторінки не існує на сервері.</b><br/>
-                    <b>Можливо, ця сторінка видалена, перейменована або тимчасово недоступна.</b></p>
-                </div>
-                <br/>
-                <p class="fs-6"><b><a href="{% url 'index' %}">Поверніться на головну сторінку</a></b></p>
-            </div>
+    <div class="container my-5">
+        <div class="text-center" style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">
+            <h1 class="fs-1" style="letter-spacing: 0.7em; margin-right: -0.6em;">FERMA NEW</h1>
+            <h2 class="fs-4 mt-3" style="letter-spacing:0.32em;">відпочинковий комплекс</h2>
         </div>
     </div>
+
+    <section class="error-404"> <!-- css не прописаний -->
+        <div class="container-md pt-5">
+            <div class="row justify-content-md-center">
+                <div class="col-lg-6" style="text-align: center;">
+                    <h2 class="fs-1">Помилка 404</h2>
+                    <br/>
+                    <p class="fs-3"><b>Такої сторінки не знайдено</b></p>
+                    <br/>
+                    <div class="fs-6">
+                        <p><b>Такої сторінки не існує на сервері.</b><br/>
+                        <b>Можливо, ця сторінка видалена, перейменована або тимчасово недоступна.</b></p>
+                    </div>
+                    <br/>
+                    <p class="fs-6"><b><a href="{% url 'index' %}">Поверніться на головну сторінку</a></b></p>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>

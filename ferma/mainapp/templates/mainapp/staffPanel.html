@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block content %}
-
+<main>
     <div class="container my-5">
         <div class="text-center" style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">
             <h1 class="fs-1" style="letter-spacing: 0.7em; margin-right: -0.6em;">FERMA NEW</h1>
@@ -27,6 +27,7 @@
     <!--              <th class="text-center" scope="col">Час</th>-->
                   <th class="text-center" scope="col">Будинок</th>
                   <th class="text-center" scope="col">Додаткові послуги</th>
+                  <th class="text-center" scope="col">Домашні улюбленці</th>
                   <th class="text-center" scope="col">Імʼя</th>
                   <th class="text-center" scope="col">Прізвище</th>
                   <th class="text-center" scope="col">Телефон</th>
@@ -41,6 +42,7 @@
     <!--              <td class="text-center">{{item.time}}</td>-->
                   <td class="text-center">{{item.holidayhouse}}</td>
                   <td class="text-center">{{item.booking_wish}}</td>
+                  <td class="text-center">{{item.booking_pets}}</td>
                   <td class="text-center">{{item.user.first_name}}</td>
                   <td class="text-center">{{item.user.last_name}}</td>
                   <td class="text-center">
@@ -88,8 +90,9 @@
             </div>
         </div>
 
-
     {% endif %}
+
+</main>
 
 <!--Staff Panel Search-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

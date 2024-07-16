@@ -4,11 +4,12 @@
 
 
 {% block screensaver %}
+    <!--      background-size: 1500px;-->
     <div
     class="p-0 bg-image position-relative"
     style="
-      background-image: url('{% static 'mainapp/images/background/farm_hadgehog.png' %}');
-      background-size: 1500px;
+      background-image: url('{% static 'mainapp/images/background/farm_hadgehog_2.png' %}');
+      background-size: cover;
       height: 600px;
       width: auto;
     ">
@@ -28,7 +29,7 @@
   <div class="carousel-inner">
     <!-- Single item -->
     <div class="carousel-item active position-relative">
-      <video class="img-fluid" autoplay loop muted>
+      <video class="img-fluid" autoplay loop muted preload="auto" playsinline>
         <source src="{% static 'mainapp/video/carousel/Tropical.mp4' %}" type="video/mp4"/>
       </video>
 <!--      <div class="position-absolute top-50 start-50 translate-middle text-center" style="color: white">-->
@@ -45,9 +46,16 @@
 
     <!-- Single item -->
     <div class="carousel-item position-relative">
-      <video class="img-fluid" autoplay loop muted>
+      <video class="img-fluid" autoplay loop muted preload="auto" playsinline>
         <source src="https://mdbcdn.b-cdn.net/img/video/forest.mp4" type="video/mp4"/>
       </video>
+
+<!-- перед завантаженням відео спочатку завантажує зображення (постер). допомога при поганому інтернеті та слабких пристроях -->
+<!--      <video class="img-fluid" autoplay loop muted preload="auto" playsinline poster="{% static 'mainapp/images/holiday_house/1/h_house1.1.png' %}">-->
+<!--        <source src="{% static 'mainapp/video/carousel/Tropical.mp4' %}" type="video/mp4"/>-->
+<!--      </video>-->
+
+
 <!--      <div class="position-absolute top-50 start-50 translate-middle text-center" style="color: white">-->
 <!--        <h1 class="display-1" style="letter-spacing: 0.7em; margin-right: -0.6em">ФЕРМА</h1>-->
 <!--        <p class="fs-4 mt-3" style="letter-spacing:0.4em">відпочинковий комплекс</p>-->
@@ -62,9 +70,10 @@
 
     <!-- Single item -->
     <div class="carousel-item position-relative">
-      <video class="img-fluid" autoplay loop muted>
+      <video class="img-fluid" autoplay loop muted preload="auto" playsinline>
         <source src="https://mdbcdn.b-cdn.net/img/video/Agua-natural.mp4" type="video/mp4"/>
       </video>
+
 <!--      <div class="position-absolute top-50 start-50 translate-middle text-center" style="color: white">-->
 <!--        <h1 class="display-1" style="letter-spacing: 0.7em; margin-right: -0.6em">ФЕРМА</h1>-->
 <!--        <p class="fs-4 mt-3" style="letter-spacing:0.4em">відпочинковий комплекс</p>-->
@@ -137,7 +146,7 @@
 {% endblock post %}
 
 {% block content %}
-
+<main>
 <!-- Holiday Houses -->
 
 <div class="album py-5">
@@ -157,8 +166,8 @@
           <div class="card border-0 shadow">
             <div>
               <a href="{% static 'mainapp/images/holiday_house/1/h_house1.1.png' %}" data-lightbox="image-1">
-                <!--miniature 16:9 (250x140 px) at a weight of 50 kilobytes-->
-                <img class="bd-placeholder-img card-img-top" width="100%" height="100%" src="{% static 'mainapp/images/holiday_house/1/h_house1.1.png' %}" alt="Thumbnail">
+                <!--miniature 16:9 (250x140 px) at a weight of 50 kilobytes--> <!--width="100%" height="100%"-->
+                <img class="bd-placeholder-img card-img-top" style="width:100%; height: auto;" src="{% static 'mainapp/images/holiday_house/1/h_house1.1.png' %}" alt="Thumbnail">
 
                 <div class="card-img-overlay" style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">
                   <h3 class="card-title">Будинок 1</h3>
@@ -167,6 +176,7 @@
                   </p>
                 </div>
               </a>
+<!--              <a href="{% static 'mainapp/images/holiday_house/1/h_house1.2.png' %}" data-lightbox="image-1" style="display: none;">-->
               <a href="{% static 'mainapp/images/holiday_house/1/h_house1.2.png' %}" data-lightbox="image-1" style="display: none;">
                   <img src="{% static 'mainapp/images/holiday_house/1/h_house1.2.png' %}" alt="Additional Image 1">
               </a>
@@ -294,7 +304,7 @@
           <div class="card border-0 shadow">
             <div>
               <a href="{% static 'mainapp/images/holiday_house/1/h_house1.1.png' %}" data-lightbox="image-1">
-                <img class="bd-placeholder-img card-img-top" width="100%" height="100%" src="{% static 'mainapp/images/holiday_house/1/h_house1.1.png' %}" alt="Thumbnail">
+                <img class="bd-placeholder-img card-img-top" style="width:100%; height: auto;" src="{% static 'mainapp/images/holiday_house/1/h_house1.1.png' %}" alt="Thumbnail">
 
                 <div class="card-img-overlay" style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">
                   <h3 class="card-title">Будинок 2</h3>
@@ -430,7 +440,7 @@
           <div class="card border-0 shadow">
             <div>
               <a href="{% static 'mainapp/images/holiday_house/1/h_house1.1.png' %}" data-lightbox="image-1">
-                <img class="bd-placeholder-img card-img-top" width="100%" height="100%" src="{% static 'mainapp/images/holiday_house/1/h_house1.1.png' %}" alt="Thumbnail">
+                <img class="bd-placeholder-img card-img-top" style="width:100%; height: auto;" src="{% static 'mainapp/images/holiday_house/1/h_house1.1.png' %}" alt="Thumbnail">
 
                 <div class="card-img-overlay" style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">
                   <h3 class="card-title">Будинок 3</h3>
@@ -569,7 +579,7 @@
           <div class="card border-0 shadow">
             <div>
               <a href="{% static 'mainapp/images/holiday_house/1/h_house1.1.png' %}" data-lightbox="image-1">
-                <img class="bd-placeholder-img card-img-top" width="100%" height="100%" src="{% static 'mainapp/images/holiday_house/1/h_house1.1.png' %}" alt="Thumbnail">
+                <img class="bd-placeholder-img card-img-top" style="width:100%; height: auto;" src="{% static 'mainapp/images/holiday_house/1/h_house1.1.png' %}" alt="Thumbnail">
 
                 <div class="card-img-overlay" style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">
                   <h3 class="card-title">Будинок 4</h3>
@@ -704,7 +714,7 @@
           <div class="card border-0 shadow">
             <div>
               <a href="{% static 'mainapp/images/holiday_house/1/h_house1.1.png' %}" data-lightbox="image-1">
-                <img class="bd-placeholder-img card-img-top" width="100%" height="100%" src="{% static 'mainapp/images/holiday_house/1/h_house1.1.png' %}" alt="Thumbnail">
+                <img class="bd-placeholder-img card-img-top" style="width:100%; height: auto;" src="{% static 'mainapp/images/holiday_house/1/h_house1.1.png' %}" alt="Thumbnail">
 
                 <div class="card-img-overlay" style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">
                   <h3 class="card-title">Будинок 5</h3>
@@ -843,7 +853,7 @@
           <div class="card border-0 shadow">
             <div>
               <a href="{% static 'mainapp/images/holiday_house/1/h_house1.1.png' %}" data-lightbox="image-1">
-                <img class="bd-placeholder-img card-img-top" width="100%" height="100%" src="{% static 'mainapp/images/holiday_house/1/h_house1.1.png' %}" alt="Thumbnail">
+                <img class="bd-placeholder-img card-img-top" style="width:100%; height: auto;" src="{% static 'mainapp/images/holiday_house/1/h_house1.1.png' %}" alt="Thumbnail">
 
                 <div class="card-img-overlay" style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">
                   <h3 class="card-title">Будинок 6</h3>
@@ -979,7 +989,7 @@
           <div class="card border-0 shadow">
             <div>
               <a href="{% static 'mainapp/images/holiday_house/1/h_house1.1.png' %}" data-lightbox="image-1">
-                <img class="bd-placeholder-img card-img-top" width="100%" height="100%" src="{% static 'mainapp/images/holiday_house/1/h_house1.1.png' %}" alt="Thumbnail">
+                <img class="bd-placeholder-img card-img-top" style="width:100%; height: auto;" src="{% static 'mainapp/images/holiday_house/1/h_house1.1.png' %}" alt="Thumbnail">
 
                 <div class="card-img-overlay" style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">
                   <h3 class="card-title">Будинок 7</h3>
@@ -1115,7 +1125,7 @@
           <div class="card border-0 shadow">
             <div>
               <a href="{% static 'mainapp/images/holiday_house/1/h_house1.1.png' %}" data-lightbox="image-1">
-                <img class="bd-placeholder-img card-img-top" width="100%" height="100%" src="{% static 'mainapp/images/holiday_house/1/h_house1.1.png' %}" alt="Thumbnail">
+                <img class="bd-placeholder-img card-img-top" style="width:100%; height: auto;" src="{% static 'mainapp/images/holiday_house/1/h_house1.1.png' %}" alt="Thumbnail">
 
                 <div class="card-img-overlay" style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">
                   <h3 class="card-title">Додаткові послуги</h3>
@@ -1254,7 +1264,7 @@
   </div>
 </div>
 <!-- end Holiday Houses -->
-
+</main>
 <!--contact us-->
 <section id="contact" class="card border-0 shadow m-3 p-3">
     <div class="container">

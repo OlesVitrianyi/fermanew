@@ -4,6 +4,7 @@
 
 {% block content %}
 
+<main>
     <div class="container my-5">
         <div class="text-center" style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">
             <h1 class="fs-1" style="letter-spacing: 0.7em; margin-right: -0.6em;">FERMA NEW</h1>
@@ -80,7 +81,8 @@
                                             <td class="bg-primary text-white"><del>{{ day }}</del></td>
                                         {% else %}
                                             <td class="bg-primary text-white">{{ day }}<br>
-                                                <span class="date-price text-white">2000&#8372;</span></td>
+                                                <span class="date-price text-white">4100&#8372;</span>
+                                            </td>
 
                                         {% endif %}
                                     {% elif day < current_day %}
@@ -89,7 +91,7 @@
                                         <td><del>{{ day }}</del></td>
                                     {% else %}
                                         <td>{{ day }}<br>
-                                                    <span class="date-price">2000&#8372;</span></td>
+                                                    <span class="date-price">4100&#8372;</span></td>
 
                                     {% endif %}
                                 {% else %}
@@ -130,7 +132,7 @@
                                         <td><del>{{ day }}</del></td>
                                     {% else %}
                                         <td>{{ day }}<br>
-                                                    <span class="date-price">2000&#8372;</span></td>
+                                                    <span class="date-price">4100&#8372;</span></td>
                                     {% endif %}
                                 {% else %}
                                     <td></td>
@@ -171,7 +173,7 @@
                                     <td><del>{{ day }}</del></td>
                                 {% else %}
                                     <td>{{ day }}<br>
-                                                <span class="date-price">2000&#8372;</span></td>
+                                                <span class="date-price">4100&#8372;</span></td>
                                 {% endif %}
                             {% else %}
                                 <td></td>
@@ -208,6 +210,7 @@
     <div class="text-center">
     <a type="button" class="btn btn-outline-primary shadow mt-4" href="{% url 'booking' %}">Бронювання</a>
     </div>
+</main>
 
   <script>
     document.addEventListener("DOMContentLoaded", function() {

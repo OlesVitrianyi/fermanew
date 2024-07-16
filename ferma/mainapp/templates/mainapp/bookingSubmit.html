@@ -1,9 +1,9 @@
-<title>Вибір будинку, домашні улюбленці та додаткові послуги онлайн бронювання будинків відпочинку Ferma New</title>
+<title>Вибір будинку, домашні улюбленці та додаткові послуги онлайн бронювання Ferma New</title>
 {% extends 'mainapp/base.html' %}
 {% load static %}
 
 {% block content %}
-
+<main>
     <div class="container my-5">
         <div class="text-center" style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">
             <h1 class="fs-1" style="letter-spacing: 0.7em; margin-right: -0.6em;">FERMA NEW</h1>
@@ -16,12 +16,15 @@
             <div class="col-lg-6">
 
                 {% if user.is_authenticated %}
-                    <h2 class="text-center mt-3">БРОНЮВАННЯ БУДИНКІВ</h2>
+                    <h2 class="text-center mt-3">
+                        БРОНЮВАННЯ БУДИНКУ<br />
+                        та додаткових послуг
+                    </h2>
                     <div class="card border-0 shadow m-3 p-3">
                     <!--<div class="shadow p-4 mb-5 bg-body bg-body rounded text-black text-center m-5">-->
 
-                        <form method="post" action="{% url 'bookingSubmit' %}" class="me-2 ms-2" required>
-
+<!--                        <form method="post" action="{% url 'bookingSubmit' %}" class="me-2 ms-2" required>-->
+                        <form method="post" action="{% url 'bookingSubmit' %}" class="me-2 ms-2">
                             {% csrf_token %}
 
                             <!--Choice of house-->
@@ -54,7 +57,7 @@
                             <div class="mt-3">
                                 <h3 class="text-center">Домашні улюбленці:</h3>
                                     <div class="alert alert-primary" role="alert">
-                                        Напишіть нам про Ваших домашніх Улюбленців, яки приїдуть на відпочинок разом з Вами.
+                                        Напишіть нам про Ваших домашніх Улюбленців, які приїдуть на відпочинок разом з Вами.
                                         Хто вони, їх розміри та імʼя. <br />
                                         Ferma New дружня до тварин.
                                     </div>
@@ -103,5 +106,5 @@
             </div>
         </div>
     </div>
-
+</main>
 {% endblock %}

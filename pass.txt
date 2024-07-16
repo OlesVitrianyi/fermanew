@@ -26,6 +26,19 @@ https://www.ukraine.com.ua/uk/
 login: fermanew.com@gmail.com
 pass: m%f837g(PE
 Ваш ID: 842937
+Адреса: м. Хмельницький,
+вул. Заводська, 40/1 кв. 1,
+29007
+тел. +380672686552
+credit card
+monobank
+Name on card: Chuk Volodymyr
+Card number: 4441111143344673
+Expiry/validity: 12/28
+code 857
+
+
+
 
 https://www.pythonanywhere.com/registration/register/beginner/
 login: fermanew
